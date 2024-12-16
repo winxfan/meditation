@@ -1,0 +1,22 @@
+.container {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background-color: var(--app-opacity-bg);
+  color: var(--app-text-color);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  display: block;
+  opacity: 0.5;
+}

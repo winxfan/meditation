@@ -1,0 +1,14 @@
+{
+  "program.title": "Программа курса",
+  "program.passed": "Пройдено",
+  "program.current": "Текущий",
+  "program.locked": "Закрыто",
+  "program.open": "Открыто",
+  "program.button": "Программа модуля",
+  "program.lessonsCount_one": "{{count}} урок",
+  "program.lessonsCount_few": "{{count}} урока",
+  "program.lessonsCount_many": "{{count}} уроков",
+  "Test.question.points_one": "{{count}} балл",
+  "Test.question.points_few": "{{count}} балла",
+  "Test.question.points_many": "{{count}} баллов"
+}

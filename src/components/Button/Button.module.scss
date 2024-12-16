@@ -1,0 +1,55 @@
+.button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color, color 0.125s;
+}
+
+.small {
+  padding: 4px 10px 4px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 13.75px;
+  letter-spacing: -0.022em;
+}
+
+.medium {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 13.75px;
+  letter-spacing: -0.022em;
+}
+
+//&.small {
+//  padding: 4px 10px 4px 10px;
+//  border-radius: 8px;
+//  font-size: 11px;
+//  font-weight: 500;
+//  line-height: 13.75px;
+//  letter-spacing: -0.022em;
+//}
+
+.violet {
+  background: rgba(114, 8, 118, 1);
+  color: white;
+
+  &:hover, &:focus {
+    background: rgb(69, 2, 71);
+  }
+}
+
+.white {
+  background: white;
+  color: rgba(111, 4, 115, 1);
+
+  &:hover, &:focus {
+    background: white;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

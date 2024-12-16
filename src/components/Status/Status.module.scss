@@ -1,0 +1,12 @@
+.status {
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: black;
+  background-color: #fff;
+  font-weight: 700;
+
+  &:global(.locked) {
+    color: white;
+    background-color: #838390;
+  }
+}

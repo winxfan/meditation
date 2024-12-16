@@ -1,0 +1,51 @@
+.wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 45px;
+  gap: 10px;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    opacity: 0.75;
+    transition: opacity .15s;
+
+    .nameIcon {
+      transform: translateX(2.5px);
+      transition: transform .15s;
+    }
+  }
+}
+
+.avatar {
+  border-radius: 12px;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: right;
+}
+
+.nameIcon {
+  font-size: 13px;
+}
+
+.userName {
+  font-size: 13px;
+  color: #0166FE;
+}
+
+.skeletonAvatar {
+  width: 40px;
+  height: 40px;
+}
+
+.skeletonName span {
+  height: 15px !important;
+}

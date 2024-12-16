@@ -1,0 +1,12 @@
+.slider {
+  margin: 0 -14px;
+
+  :global(.swiper-slide:first-child) {
+    margin-left: 14px
+  }
+}
+
+.slide {
+  width: 230px !important;
+  box-sizing: border-box;
+}

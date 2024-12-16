@@ -1,0 +1,46 @@
+.container {
+  margin: 10px 0;
+  background: linear-gradient(206.4deg, #7A2B7D 1.12%, #5B055F 98.88%),
+  linear-gradient(244.52deg, #78117C -15.32%, #381FB7 111.11%);
+  padding: 14px 14px 16px;
+  border-radius: 20px;
+}
+
+.topText {
+  color: rgba(198, 149, 200, 1);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.022em;
+}
+
+.title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 24.99px;
+  letter-spacing: -0.022em;
+  color: rgba(236, 233, 240, 1);
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.04px;
+  letter-spacing: -0.022em;
+  color: rgba(236, 233, 240, 1);
+}
+
+.body {
+  margin-top: 19px;
+}
+
+.footer {
+  margin-top: 36px;
+}
+
+.slider {
+  margin: 19px -14px 0;
+
+  :global(.swiper-slide:first-child) {
+    margin-left: 14px
+  }
+}
