@@ -1,33 +1,48 @@
 import css from './StepCard.module.scss';
 import {Button} from "@/components/Button";
 
-export const StepCard = () => {
+interface StepCardProps {
+	topText?: string;
+	title?: string;
+	description?: string;
+	pictureSrc: string;
+	onButtonClick?: () => void;
+}
+
+export const StepCard = (props: StepCardProps) => {
+	const {topText, title, description, onButtonClick, pictureSrc} = props;
+
 	return (
-		<div className={css.container}>
+		<div className={css.container} style={{backgroundImage: `url(${pictureSrc})`}}>
 			<div>
-				<p className={css.topText}>шаг 2</p>
+				{topText && (
+					<p className={css.topText}>
+						{topText}
+					</p>
+				)}
 			</div>
 
 			<div className={css.body}>
-				<p className={css.title}>
-					Тонкие законы реальности: <br/> настройка на ваши мечты
-				</p>
+				{title && (
+					<p className={css.title}>
+						{title}
+					</p>
+				)}
 
-				<p className={css.description}>
-					Результат:<br/>
-					Вдохновение и внутренний импульс <br/>
-					для выхода на новый финансовый <br/>
-					и личностный уровень.
-				</p>
+				{description && (
+					<p className={css.description}>
+						{description}
+					</p>
+				)}
 			</div>
 
 			<div className={css.footer}>
-				<Button variant="violet" size="small">
+				<Button variant="violet" size="small" onClick={onButtonClick}>
 					Смотреть
 				</Button>
 			</div>
 
-			{/*<image className={css.picture} src={picture as any}/>*/}
+			{/*<img className={css.picture} src={pictureSrc}/>*/}
 		</div>
 	);
 }

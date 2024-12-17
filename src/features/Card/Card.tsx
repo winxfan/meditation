@@ -5,6 +5,7 @@ import {Button} from "@/components/Button";
 export interface CardProps {
 	title?: string;
 	description?: string;
+	descriptionLight?: boolean;
 	topText?: string;
 	variant?: 'light' | 'black' | 'transparent';
 	pictureUrl?: string;
@@ -12,8 +13,10 @@ export interface CardProps {
 	buttonTitle?: string;
 	align?: 'left' | 'right';
 	size?: 'large' | 'small';
-	contentWidth?: string;
+	titleWidth?: string;
+	descriptionWidth?: string;
 	className?: string;
+	buttonClassName?: string
 }
 
 export const Card = (props: CardProps) => {
@@ -27,8 +30,11 @@ export const Card = (props: CardProps) => {
 		buttonTitle,
 		align,
 		size = 'small',
-		contentWidth = '100%',
+		titleWidth = '100%',
+		descriptionWidth = '100%',
 		className,
+		descriptionLight,
+		buttonClassName,
 	} = props;
 
 	return (
@@ -40,27 +46,37 @@ export const Card = (props: CardProps) => {
 		>
 			<div
 				className={css.content}
-				style={{
-					maxWidth: contentWidth
-				}}
 			>
 				{topText && (
 					<p className={css.topText}>{topText}</p>
 				)}
 
 				{title && (
-					<p className={css.title}>{title}</p>
+					<p className={css.title}
+					   style={{
+						   maxWidth: titleWidth
+					   }}
+					>
+						{title}
+					</p>
 				)}
 
 				{description && (
-					<p className={css.description}>{description}</p>
+					<p
+						className={cs(css.description, descriptionLight && css.descriptionLight)}
+						style={{
+							maxWidth: descriptionWidth
+						}}
+					>
+						{description}
+					</p>
 				)}
 
 				{buttonTitle && (
 					<Button
 						variant={variant === 'white' ? 'white' : 'violet'}
 						size="small"
-						className={css.button}
+						className={cs(css.button, buttonClassName)}
 						onClick={buttonOnClick}
 					>
 						{buttonTitle}

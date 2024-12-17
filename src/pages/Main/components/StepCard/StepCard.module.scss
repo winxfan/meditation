@@ -1,9 +1,9 @@
 .container {
-  background-color: rgba(251, 248, 251, 1);
-  width: 240px;
-  height: 248px;
-  border-radius: 12px;
-  padding: 9px 19px;
+  width: 248px;
+  aspect-ratio: 240 / 248;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
 }
 
 .topText {
@@ -22,6 +22,7 @@
   color: rgba(33, 40, 49, 1);
   display: block;
   margin-top: 8px;
+  white-space: pre-line;
 }
 
 .description {
@@ -32,8 +33,11 @@
   letter-spacing: -0.011em;
   display: block;
   margin-top: 12px;
+  white-space: pre-line;
 }
 
 .footer {
-  margin-top: 74px;
+  position: absolute;
+  left: 9px;
+  bottom: 12px;
 }

@@ -1,8 +1,23 @@
 import css from './PrivateMeditationClub.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {StepCard} from "@/pages/Main/components/StepCard";
+import step1 from '@/assets/image/step1.png';
+import step2 from '@/assets/image/step2.png';
+import step3 from '@/assets/image/step3.png';
+import step4 from '@/assets/image/step4.png';
+import step5 from '@/assets/image/step5.png';
+import step6 from '@/assets/image/step6.png';
+import step7 from '@/assets/image/step7.png';
+import step8 from '@/assets/image/step8.png';
+import step9 from '@/assets/image/step9.png';
+import step10 from '@/assets/image/step10.png';
+import step11 from '@/assets/image/step11.png';
+import step12 from '@/assets/image/step12.png';
 
 export const PrivateMeditationClub = () => {
+	const pictureData: string[] = [
+		step1, step2, step3, step4, step5, step6, step7, step8, step9, step10, step11, step12,
+	]
 
 	return (
 		<div className={css.container}>
@@ -29,9 +44,11 @@ export const PrivateMeditationClub = () => {
 				spaceBetween={6}
 				className={css.slider}
 			>
-				<SwiperSlide className={css.slide}>
-					<StepCard/>
-				</SwiperSlide>
+				{pictureData.map((item, index) => (
+					<SwiperSlide className={css.slide} key={index}>
+						<StepCard pictureSrc={item}/>
+					</SwiperSlide>
+				))}
 			</Swiper>
 		</div>
 	)

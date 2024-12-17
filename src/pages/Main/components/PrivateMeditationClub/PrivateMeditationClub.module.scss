@@ -1,7 +1,6 @@
 .container {
   margin: 10px 0;
-  background: linear-gradient(206.4deg, #7A2B7D 1.12%, #5B055F 98.88%),
-  linear-gradient(244.52deg, #78117C -15.32%, #381FB7 111.11%);
+  background: linear-gradient(244.52deg, #78117C -15.32%, #381FB7 111.11%);
   padding: 14px 14px 16px;
   border-radius: 20px;
 }
@@ -43,4 +42,8 @@
   :global(.swiper-slide:first-child) {
     margin-left: 14px
   }
+}
+
+.slide {
+  width: 248px;
 }

@@ -70,11 +70,7 @@ export const LevelsSlider = () => {
 			>
 				{levelsData.map((item) => (
 					<SwiperSlide key={item.id}>
-						<Card
-							title={item.title}
-							pictureUrl={item.pictureUrl}
-							contentWidth="80%"
-						/>
+						<img src={item.pictureUrl} className={css.img} />
 					</SwiperSlide>
 				))}
 			</Swiper>

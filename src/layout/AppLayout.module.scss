@@ -1,6 +1,6 @@
 *, body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'SF Pro Rounded', sans-serif;
   box-sizing: border-box !important;
 }
 
@@ -41,8 +41,9 @@
 .layout {
   margin: 0 auto;
   display: block;
-  max-width: 562px;
+  max-width: 425px;
   min-height: 100vh;
+  position: relative;
   //background-color: var(--app-bg-color);
   //color: var(--app-text-color);
 }
