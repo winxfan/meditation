@@ -15,12 +15,16 @@ const router = createBrowserRouter([
 		element: <App/>,
 		children: [
 			{
-				path: "/:courseId?",
+				path: "/?",
 				element: <pages.MainPage/>,
 			},
 			{
-				path: "/:courseId?/base70Practics",
-				element: <pages.Base70Practics/>,
+				path: "/twelveSteps/:id",
+				element: <pages.TwelveSteps/>,
+			},
+			{
+				path: "/lesson/:id",
+				element: <pages.Lesson/>,
 			},
 			{
 				path: "auth/:token?",

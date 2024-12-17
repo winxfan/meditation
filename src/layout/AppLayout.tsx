@@ -32,11 +32,11 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
     expand?.();
   }, [colorScheme])
 
-  useEffect(() => {
-    if (courseId && courseStatus === LoadingStatus.none) {
-      dispatch(getCourse({id: courseId}));
-    };
-  }, [courseId, courseStatus])
+  // useEffect(() => {
+  //   if (courseId && courseStatus === LoadingStatus.none) {
+  //     dispatch(getCourse({id: courseId}));
+  //   };
+  // }, [courseId, courseStatus])
 
   useEffect(() => {
     if (isAuthorized) return;
@@ -50,8 +50,7 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
       const data = userId ? {id: userId, first_name, username}: undefined;
 
       dispatch(userAuth({
-        courseId,
-        data
+        email: ''
       }));
     };
   }, [userId, courseId, isAuthorized, userStatus])

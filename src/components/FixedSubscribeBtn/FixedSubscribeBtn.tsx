@@ -1,4 +1,4 @@
-import css from "@/pages/Base70Practics/Base70Practics.module.scss";
+import css from "./FixedSubscribeBtn.module.scss";
 import {Button} from "@/components/Button";
 
 export const FixedSubscribeBtn = () => {

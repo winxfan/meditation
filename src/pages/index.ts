@@ -4,13 +4,16 @@ const MainPage = lazy(() => import('./Main'));
 const NotFoundPage = lazy(() => import('./NotFoundPage'));
 
 const AuthPage = lazy(() => import('./Auth'));
-const Base70Practics = lazy(() => import('./Base70Practics'));
 
+const TwelveSteps = lazy(() => import('./TwelveSteps'));
+
+const Lesson = lazy(() => import('./Lesson'));
 
 export {
 	MainPage,
 	NotFoundPage,
 	AuthPage,
-	Base70Practics,
+	TwelveSteps,
+	Lesson,
 }
 

@@ -35,3 +35,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 6px;
 }
+
+.card {
+  aspect-ratio: 154 / 181;
+  height: auto !important;
+}

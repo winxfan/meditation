@@ -13,8 +13,11 @@ import step9 from '@/assets/image/step9.png';
 import step10 from '@/assets/image/step10.png';
 import step11 from '@/assets/image/step11.png';
 import step12 from '@/assets/image/step12.png';
+import {useNavigate, useParams} from "react-router-dom";
+import {DEFAULT_COURSE_ID} from "@/store/user/data";
 
 export const PrivateMeditationClub = () => {
+	const navigate = useNavigate();
 	const pictureData: string[] = [
 		step1, step2, step3, step4, step5, step6, step7, step8, step9, step10, step11, step12,
 	]
@@ -46,7 +49,7 @@ export const PrivateMeditationClub = () => {
 			>
 				{pictureData.map((item, index) => (
 					<SwiperSlide className={css.slide} key={index}>
-						<StepCard pictureSrc={item}/>
+						<StepCard pictureSrc={item} onButtonClick={() => navigate(`/twelveSteps/${index + 1}`)}/>
 					</SwiperSlide>
 				))}
 			</Swiper>

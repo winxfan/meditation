@@ -4,7 +4,7 @@ import { LoadingStatus } from "@/constants";
 import {HttpResponse, IUser, ITelegramUser} from "@/utils/types";
 import {
   ApiNextLessonParams,
-  fetchAuth,
+  getUser,
   fetchNextLesson,
 } from "@/utils/api/auth";
 
@@ -21,9 +21,9 @@ export interface UserAuthParams {
   courseId: string
 }
 
-export const userAuth = createAsyncThunk<HttpResponse<IUser>, UserAuthParams>(
+export const userAuth = createAsyncThunk<HttpResponse<IUser>, {email: string}>(
   'user/auth',async (props) => {
-  const {data} = await fetchAuth(props);
+  const {data} = await getUser('ukuleleman31@gmail.com');
   return data;
 });
 
@@ -56,18 +56,18 @@ const userSlice = createSlice({
       state.status = LoadingStatus.success;
       state.isAuthorized = true;
       state.data = action.payload.data;
-    }),
-    builder.addCase(userNextLesson.pending, (state) => {
-      state.nextLessonStatus = LoadingStatus.pending;
-    }),
-    builder.addCase(userNextLesson.rejected, (state) => {
-      state.nextLessonStatus = LoadingStatus.error;
-    }),
-    builder.addCase(userNextLesson.fulfilled, (state, action) => {
-      state.nextLessonStatus = LoadingStatus.success;
-      // update
-      // state.data.currentLesson = action.payload.data;
     })
+    // builder.addCase(userNextLesson.pending, (state) => {
+    //   state.nextLessonStatus = LoadingStatus.pending;
+    // }),
+    // builder.addCase(userNextLesson.rejected, (state) => {
+    //   state.nextLessonStatus = LoadingStatus.error;
+    // }),
+    // builder.addCase(userNextLesson.fulfilled, (state, action) => {
+    //   state.nextLessonStatus = LoadingStatus.success;
+    //   // update
+    //   // state.data.currentLesson = action.payload.data;
+    // })
   },
 })
 

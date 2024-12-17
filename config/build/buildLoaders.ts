@@ -89,6 +89,14 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
 		},
 	};
 
+	const mp3Loader = {
+			test: /\.(mp3|wav|ogg)$/,
+			type: "asset/resource", // Обрабатывает файлы как ресурсы и копирует их
+			generator: {
+				filename: "assets/audio/[name][ext]", // Путь сохранения файлов
+			},
+		}
+
 	return [
 		sassLoader,
 		sassModuleLoader,
@@ -96,5 +104,6 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
 		babelLoader,
 		svgLoader,
 		assetsLoader,
+		mp3Loader,
 	];
 }

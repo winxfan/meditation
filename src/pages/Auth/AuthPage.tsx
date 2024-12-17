@@ -27,7 +27,7 @@ export const AuthPage = () => {
 			})
 
 			if (courseId) {
-				dispatch(userAuth({courseId}));
+				// dispatch(userAuth({courseId}));
 			}
 		}
 	}, [dispatch, token, courseId]);

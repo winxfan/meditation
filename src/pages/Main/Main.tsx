@@ -18,8 +18,8 @@ import additionalCard3 from '@/assets/image/additionalCard3.png'
 import additionalCard4 from '@/assets/image/additionalCard4.png'
 import {Hr} from "@/components/Hr";
 import {LevelsSlider} from "@/pages/Main/components/LevelsSlider";
-import {Button} from "@/components/Button";
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
+
 export const Main = () => {
   return (
     <div>
@@ -35,7 +35,7 @@ export const Main = () => {
         <Card
           pictureUrl={banner1}
           size="large"
-          className={css.banner}
+          className={css.banner1}
         />
 
         <div className={css.splitContainer}>
