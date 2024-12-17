@@ -1,0 +1,33 @@
+.fixedButtonContainer {
+  margin-top: 30px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.subscribeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 49px;
+}
+
+.subscribeBtnTitle {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  color: white;
+}
+
+.subscribeBtnPrice {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: -0.4399999976158142px;
+  background-color: rgba(82, 3, 85, 1);
+  display: block;
+  padding: 4px 7.3px;
+  border-radius: 3px;
+}

@@ -19,6 +19,10 @@ const router = createBrowserRouter([
 				element: <pages.MainPage/>,
 			},
 			{
+				path: "/:courseId?/base70Practics",
+				element: <pages.Base70Practics/>,
+			},
+			{
 				path: "auth/:token?",
 				element: <pages.AuthPage/>,
 			},
