@@ -19,6 +19,7 @@ import additionalCard4 from '@/assets/image/additionalCard4.png'
 import {Hr} from "@/components/Hr";
 import {LevelsSlider} from "@/pages/Main/components/LevelsSlider";
 import {Button} from "@/components/Button";
+import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 export const Main = () => {
   return (
     <div>
@@ -118,12 +119,7 @@ export const Main = () => {
           />
         </div>
 
-        <div className={css.fixedButtonContainer}>
-          <Button variant="violet" size="large" className={css.subscribeBtn} fullWidth>
-            <p className={css.subscribeBtnTitle}>Открыть полный доступ</p>
-            <span className={css.subscribeBtnPrice}>4 990₽/мес</span>
-          </Button>
-        </div>
+        <FixedSubscribeBtn/>
       </div>
     </div>
   );
