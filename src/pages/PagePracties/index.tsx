@@ -1,4 +1,3 @@
-import ButtonPrice from '@/components/Button/ButtonPrice';
 import ImageWrapper from '@/components/ImageWrapper';
 import RoundBlock from '@/components/RoundBlock';
 import { Typography } from 'antd';
@@ -14,24 +13,13 @@ import Kalendar from '@/assets/icons/kalendar.svg';
 import Vector from '@/assets/icons/vector.svg';
 
 import cl from './index.module.scss';
+import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
+import banner from "@/assets/image/PageBanner42Practicies.png";
 
 const PagePracties = () => {
     return (
         <div className={cl.page_practicies}>
-            <RoundBlock
-                classNames={cl.practicies_main}
-                background="linear-gradient(192deg, #e43978, #e43978)">
-                <Typography.Title level={1} className={cl.practicies_main__title}>
-                    42&nbsp;мощные практики для вашей трансформации и&nbsp;роста
-                </Typography.Title>
-                <Typography.Paragraph className={cl.practicies_main__text}>
-                    Годовая система из&nbsp;42&nbsp;уникальных практик, направленных
-                    на&nbsp;глубокие изменения и раскрытие вашего потенциала. Каждое
-                    воскресенье&nbsp;&mdash; живая встреча со&nbsp;мной, где мы прорабатываем
-                    ключевые аспекты вашей жизни.
-                </Typography.Paragraph>
-                <ImageWrapper src={meditation} className={cl.practicies_main__image} />
-            </RoundBlock>
+            <img src={banner} className={cl.banner} />
 
             <RoundBlock classNames={cl.transformation} background="#F0EDF0">
                 <Typography.Title level={2} className={cl.transformation__title}>
@@ -143,11 +131,7 @@ const PagePracties = () => {
                 Присоединяйтесь, чтобы почувствовать мощь изменений уже после первой практики!
             </Typography.Paragraph>
 
-            <ButtonPrice
-                title="Открыть полный доступ"
-                label="4 990₽/мес"
-                className={cl.button_price}
-            />
+            <FixedSubscribeBtn/>
         </div>
     );
 };

@@ -1,31 +1,19 @@
-import ButtonPrice from '@/components/Button/ButtonPrice';
 import RoundBlock from '@/components/RoundBlock';
 import { Button, Typography } from 'antd';
 import cl from './index.module.scss';
 import ImageWrapper from '@/components/ImageWrapper';
 
-import sergayBg from '@/assets/image/sergay.png';
 import razbor_1 from '@/assets/image/razbor_1.png';
 import razbor_2 from '@/assets/image/razbor_2.png';
 import razbor_3 from '@/assets/image/razbor_3.png';
+import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
+import banner from "@/assets/image/PageBannerSergey.png";
 
 const PageSergay = () => {
     return (
         <div className={cl.page_sergay}>
-            <RoundBlock
-                classNames={cl.main}
-                background={`right / cover url(${sergayBg}) #c09898 no-repeat`}>
-                <Typography.Title level={1} className={cl.main__title}>
-                    24&nbsp;глубинных разбора от&nbsp;Сергея
-                </Typography.Title>
-                <Typography.Paragraph className={cl.main__label}>
-                    Встречи, которые меняют всё
-                </Typography.Paragraph>
-                <Typography.Paragraph className={cl.main__text}>
-                    Каждый разбор&nbsp;&mdash; это не&nbsp;просто встреча, это мощный шаг
-                    к&nbsp;осознанию, внутренней свободе и&nbsp;реальным результатам в&nbsp;жизни.
-                </Typography.Paragraph>
-            </RoundBlock>
+            <img src={banner} className={cl.banner} />
+
             <div className={cl.rabors}>
                 <Typography.Title level={2} className={cl.rabors__title}>
                     Разборы помогут вам
@@ -92,11 +80,8 @@ const PageSergay = () => {
                     Начать достигать цели вместе с&nbsp;ботом
                 </Typography.Text>
             </Button>
-            <ButtonPrice
-                title="Открыть полный доступ"
-                label="4 990₽/мес"
-                className={cl.button_price}
-            />
+
+            <FixedSubscribeBtn/>
         </div>
     );
 };

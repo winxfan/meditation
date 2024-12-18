@@ -5,28 +5,15 @@ import inYan from '@/assets/image/in-yan.png';
 import ImageWrapper from '@/components/ImageWrapper';
 import PracticeLink from './PracticeLink';
 import { practies } from '@/data/page_base';
-import ButtonPrice from '@/components/Button/ButtonPrice';
+import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
+import banner from '@/assets/image/PageBanner70Practicies.png'
 
 const { Paragraph, Title } = Typography;
 
 const PageBase = () => {
     return (
         <div className={cl.page_base}>
-            <RoundBlock classNames={cl.base_main}>
-                <Title level={1} className={cl.base_main__title}>
-                    База из&nbsp;70&nbsp;трансформационных практик
-                </Title>
-                <Title level={2} className={cl.base_main__subtitle}>
-                    Быстрый результат и&nbsp;мощные изменения
-                </Title>
-                <Paragraph className={cl.base_main__text}>
-                    Эта уникальная коллекция из&nbsp;70&nbsp;практик&nbsp;&mdash; результат 1,5 лет
-                    глубокой работы и&nbsp;исследований. Каждая практика создаёт ощутимые изменения
-                    уже с&nbsp;первого раза. Это не&nbsp;просто упражнения, а&nbsp;мощные
-                    инструменты для трансформации вашей жизни.
-                </Paragraph>
-                <ImageWrapper src={inYan} className={cl.base_main__image} />
-            </RoundBlock>
+            <img src={banner} className={cl.banner} />
 
             <div className={cl.what_is_base}>
                 <Paragraph className={cl.what_is_base__small}>Что включает база</Paragraph>
@@ -48,11 +35,7 @@ const PageBase = () => {
                 </div>
             </div>
 
-            <ButtonPrice
-                title="Открыть полный доступ"
-                label="4 990₽/мес"
-                className={cl.button_price}
-            />
+            <FixedSubscribeBtn/>
         </div>
     );
 };
