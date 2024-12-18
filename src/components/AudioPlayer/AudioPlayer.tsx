@@ -9,6 +9,17 @@ interface AudioPlayerProps {
 	title?: string;
 }
 
+
+const loadAudioWithAbort = (waveSurfer: any, src: any) => {
+	const controller = new AbortController();
+	const { signal } = controller;
+
+	// Загрузка с использованием fetch
+	waveSurfer.load(src, undefined, undefined, { signal });
+
+	return controller;
+}
+
 export const AudioPlayer = ({ src, title }: AudioPlayerProps) => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const wavesurferRef = useRef(null);
@@ -16,7 +27,8 @@ export const AudioPlayer = ({ src, title }: AudioPlayerProps) => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		// Инициализируем Wavesurfer
+		let isMounted = true; // Флаг для проверки, что компонент всё ещё смонтирован
+
 		try {
 			const waveSurfer = WaveSurfer.create({
 				container: containerRef.current,
@@ -26,31 +38,36 @@ export const AudioPlayer = ({ src, title }: AudioPlayerProps) => {
 				height: 60,
 			});
 
-			// Загружаем аудио
-			waveSurfer.load(src);
-
-			// Показываем загрузку
 			setIsLoading(true);
+			const abortController = loadAudioWithAbort(waveSurfer, src);
 
-			// Обработчик успешной загрузки
+			// Устанавливаем обработчики событий
 			waveSurfer.on('ready', () => {
-				setIsLoading(false);
+				if (isMounted) {
+					setIsLoading(false);
+				}
 			});
 
-			// Обработчик ошибок
 			waveSurfer.on('error', (e) => {
-				console.error('Ошибка загрузки аудио:', e);
+				if (isMounted) {
+					console.error('Ошибка загрузки аудио:', e);
+					setIsLoading(false);
+				}
 			});
 
-			// Сохраняем ссылку на WaveSurfer
 			wavesurferRef.current = waveSurfer;
 
 			return () => {
-				// Уничтожаем Wavesurfer при размонтировании
-				if (wavesurferRef.current) {
-					wavesurferRef.current.destroy();
-					wavesurferRef.current = null;
-				}
+				isMounted = false;
+				abortController.abort(); // Отменяем загрузку
+
+				// Делаем паузу, чтобы запрос мог завершиться корректно (не обязательно, но уменьшает вероятность ошибки)
+				setTimeout(() => {
+					if (wavesurferRef.current) {
+						wavesurferRef.current.destroy();
+						wavesurferRef.current = null;
+					}
+				}, 100);
 			};
 		} catch (err) {
 			console.error('Ошибка инициализации WaveSurfer:', err);
