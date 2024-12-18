@@ -42,7 +42,7 @@
 .rabors__title {
     display: block;
     margin-bottom: 20px;
-    font-size: 21px;
+    font-size: 21px !important;
     color: #1e1e1e;
     line-height: 15px;
 }
@@ -99,13 +99,20 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
-    background: #3c9834;
+    background: rgba(195, 195, 195, 1);
     height: 50px;
     border-radius: 15px;
     width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: -0.4399999976158142px;
+    color: white;
 
     &:hover {
-        background: #3c9834 !important;
+        color: white !important;
+        background: rgba(195, 195, 195, 1) !important;
+        border: none;
     }
 }
 
@@ -132,3 +139,4 @@
 .fixedbutton {
     margin-top: 0px !important;
 }
+

@@ -79,9 +79,7 @@ const PageSergay = () => {
                 </div>
             </div>
             <Button className={cl.btn_go_bot}>
-                <Typography.Text className={cl.btn_go_bot__text}>
-                    Начать достигать цели вместе с&nbsp;ботом
-                </Typography.Text>
+                Начать достигать цели вместе с&nbsp;ботом
             </Button>
 
             <FixedSubscribeBtn className={cl.fixedbutton}/>
