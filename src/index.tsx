@@ -51,6 +51,10 @@ const router = createBrowserRouter([
 				element: <pages.CatalogTraining/>
 			},
 			{
+				path: "/catalogtraining/:id",
+				element: <pages.CatalogTrainingSingle/>
+			},
+			{
 				path: "*",
 				element: <pages.NotFoundPage/>
 			}

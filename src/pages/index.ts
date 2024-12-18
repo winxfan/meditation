@@ -15,11 +15,14 @@ const PageSergay = lazy(() => import('./PageSergay'));
 
 const CatalogTraining = lazy(() => import('./CatalogTraining'));
 
+const CatalogTrainingSingle = lazy(() => import('./CatalogTrainingSingle'));
+
 export {
 	MainPage,
 	NotFoundPage,
 	AuthPage,
 	TwelveSteps,
 	Lesson,
+	CatalogTraining,
 }
 
