@@ -39,6 +39,7 @@ export const Lesson = () => {
               Домашнее задание
             </b>
           </div>
+
           <p className={css.homeworkDescription}>{currentLesson?.homeworkDescription}</p>
         </div>
 

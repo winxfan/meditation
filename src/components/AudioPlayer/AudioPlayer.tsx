@@ -3,65 +3,71 @@ import WaveSurfer from "wavesurfer.js";
 import css from './AudioPlayer.module.scss';
 import PlayIcon from '@/assets/image/audioPlay.svg';
 import PauseIcon from '@/assets/image/audioPause.svg';
-import axios from "axios";
 
 interface AudioPlayerProps {
 	src: string;
 	title?: string;
 }
 
-export const AudioPlayer = ({src, title}: AudioPlayerProps) => {
+export const AudioPlayer = ({ src, title }: AudioPlayerProps) => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const wavesurferRef = useRef(null);
 	const containerRef = useRef(null);
-	const [isLoading, setIsLoading] = useState(true); // Состояние загрузки
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
+		// Инициализируем Wavesurfer
 		try {
-			wavesurferRef.current = WaveSurfer.create({
-				container: containerRef?.current,
+			const waveSurfer = WaveSurfer.create({
+				container: containerRef.current,
 				waveColor: '#4f80ff',
 				progressColor: '#fff',
 				cursorColor: '#ffffff',
 				height: 60,
 			});
 
-			wavesurferRef.current?.load(src);
+			// Загружаем аудио
+			waveSurfer.load(src);
 
-			// Показываем состояние загрузки
+			// Показываем загрузку
 			setIsLoading(true);
 
-			// Обработчик события загрузки аудиофайла
-			wavesurferRef.current?.on('ready', () => {
-				setIsLoading(false); // Аудио загружено
+			// Обработчик успешной загрузки
+			waveSurfer.on('ready', () => {
+				setIsLoading(false);
 			});
 
-			wavesurferRef.current?.on('error', () => {
-				console.log('err')
+			// Обработчик ошибок
+			waveSurfer.on('error', (e) => {
+				console.error('Ошибка загрузки аудио:', e);
 			});
+
+			// Сохраняем ссылку на WaveSurfer
+			wavesurferRef.current = waveSurfer;
+
+			return () => {
+				// Уничтожаем Wavesurfer при размонтировании
+				if (wavesurferRef.current) {
+					wavesurferRef.current.destroy();
+					wavesurferRef.current = null;
+				}
+			};
 		} catch (err) {
-			console.log({err})
+			console.error('Ошибка инициализации WaveSurfer:', err);
 		}
-
-		return () => wavesurferRef.current.destroy();
-	}, []);
+	}, [src]);
 
 	const togglePlayPause = () => {
-		wavesurferRef.current?.playPause();
-		setIsPlaying(!isPlaying);
+		if (wavesurferRef.current) {
+			wavesurferRef.current.playPause();
+			setIsPlaying(!isPlaying);
+		}
 	};
 
 	return (
 		<div className={css.audioPlayer}>
-			<p className={css.practice}>
-				Практика
-			</p>
-
-			{title && (
-				<p className={css.title}>
-					{title}
-				</p>
-			)}
+			<p className={css.practice}>Практика</p>
+			{title && <p className={css.title}>{title}</p>}
 
 			<div className={css.container}>
 				{isLoading ? (
@@ -71,7 +77,7 @@ export const AudioPlayer = ({src, title}: AudioPlayerProps) => {
 					</div>
 				) : (
 					<button onClick={togglePlayPause} className={css.playButton}>
-						{isPlaying ? <PauseIcon/> : <PlayIcon/>}
+						{isPlaying ? <PauseIcon /> : <PlayIcon />}
 					</button>
 				)}
 
