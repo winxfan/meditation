@@ -1,0 +1,35 @@
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #eaecf3;
+  border-radius: 18px;
+  padding: 10px;
+  gap: 12px;
+  text-decoration: none;
+  color: #1e1e1e;
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: #6f0473
+      url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.1941 8.23418C9.93529 8.49303 9.93529 8.9127 10.1941 9.17155L13.0233 12.0007L10.1947 14.8293C9.93584 15.0882 9.93584 15.5078 10.1947 15.7667C10.4535 16.0255 10.8732 16.0255 11.1321 15.7667L14.4129 12.4859C14.5494 12.3494 14.6139 12.1681 14.6064 11.9894C14.6079 11.8178 14.5432 11.6459 14.4123 11.515L11.1315 8.23418C10.8727 7.97533 10.453 7.97533 10.1941 8.23418Z' fill='white'/%3E%3C/svg%3E%0A")
+      no-repeat center;
+    border-radius: 100%;
+  }
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center;
+  }
+  p {
+    width: calc(100% - 48px - 24px - 24px);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+}
