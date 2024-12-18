@@ -1,7 +1,30 @@
-*, body {
+@font-face {
+  src: url("../assets/fonts/SFNSRounded.woff2") format("woff2-variations");
+  font-family: "SF Rounded";
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'SF Pro Rounded', sans-serif;
-  box-sizing: border-box !important;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "SF Rounded", sans-serif;
+  word-wrap: break-word;
+  text-rendering: optimizeSpeed;
+  text-decoration-skip: objects;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 .dark {
@@ -14,9 +37,9 @@
   --app-lesson-passed: #2b2c2d;
   --app-lesson-locked: #222326;
 
-  --app-module-passed: #56A54FFF;
-  --app-module-current: #1D5CBE;
-  --app-module-locked: #DEDEE7;
+  --app-module-passed: #56a54fff;
+  --app-module-current: #1d5cbe;
+  --app-module-locked: #dedee7;
 
   --error-color: #e51c1c;
 }
@@ -31,9 +54,9 @@
   --app-lesson-passed: #fff;
   --app-lesson-locked: #eae9e9;
 
-  --app-module-passed: #56A54FFF;
-  --app-module-current: #1D5CBE;
-  --app-module-locked: #DEDEE7;
+  --app-module-passed: #56a54fff;
+  --app-module-current: #1d5cbe;
+  --app-module-locked: #dedee7;
 
   --error-color: #e51c1c;
 }

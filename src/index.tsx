@@ -63,6 +63,10 @@ const router = createBrowserRouter([
         element: <pages.Energy365Single />,
       },
       {
+        path: "/twelvemeet",
+        element: <pages.twelveMeet />,
+      },
+      {
         path: "*",
         element: <pages.NotFoundPage />,
       },
