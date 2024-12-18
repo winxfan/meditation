@@ -1,0 +1,37 @@
+.item {
+    padding: 14px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+}
+
+.black {
+    color: #212831;
+}
+.white {
+    color: #fff;
+}
+
+.item__date {
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 10px;
+    letter-spacing: 0.1em;
+    display: block;
+    opacity: .5;
+}
+
+.item__title {
+    margin-top: 8px;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    max-width: 100px;
+    font-weight: 600;
+}

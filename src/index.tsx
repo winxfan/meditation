@@ -47,6 +47,10 @@ const router = createBrowserRouter([
 				element: <pages.AuthPage/>,
 			},
 			{
+				path: "/catalogtraining",
+				element: <pages.CatalogTraining/>
+			},
+			{
 				path: "*",
 				element: <pages.NotFoundPage/>
 			}

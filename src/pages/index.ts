@@ -13,15 +13,13 @@ const PageBase = lazy(() => import('./PageBase'));
 const PagePracties = lazy(() => import('./PagePracties'));
 const PageSergay = lazy(() => import('./PageSergay'));
 
+const CatalogTraining = lazy(() => import('./CatalogTraining'));
+
 export {
 	MainPage,
 	NotFoundPage,
 	AuthPage,
 	TwelveSteps,
 	Lesson,
-	PageBot,
-	PageBase,
-	PagePracties,
-	PageSergay,
 }
 
