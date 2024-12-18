@@ -1,11 +1,11 @@
-import ImageWrapper from '@/components/ImageWrapper';
 import cl from './index.module.scss';
-import hand from '@/assets/image/hand_with_phone.png';
 import RoundBlock from '@/components/RoundBlock';
 import { Typography } from 'antd';
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 import banner from "@/assets/image/PageBannerBot.png";
 import {useBackButton} from "@/utils/hooks/useBackButton";
+import communityScreen from "@/assets/image/CommunityScreen.png";
+import css from "@/pages/Community/Community.module.scss";
 
 const PageBot = () => {
   useBackButton();
@@ -23,10 +23,7 @@ const PageBot = () => {
                 </Typography.Paragraph>
             </RoundBlock>
 
-            <RoundBlock classNames={cl.bot_image} background="#EFEDF0">
-                <ImageWrapper src={hand} className={cl.bot_image__image} />
-            </RoundBlock>
-
+          <img src={communityScreen} className={css.screen} />
           <FixedSubscribeBtn/>
         </div>
     );
