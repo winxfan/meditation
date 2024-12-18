@@ -6,8 +6,11 @@ import { store } from '../store'
 import {Outlet} from "react-router-dom";
 import {QueryParamProvider} from "use-query-params";
 import {ReactRouter6Adapter} from "use-query-params/adapters/react-router-6";
+import {useTelegram} from "@/utils/hooks/useTelegram";
 
 export const App = () => {
+  const { expand, enableClosingConfirmation } = useTelegram();
+
   return (
     <ErrorCatch>
       <Provider store={store}>
