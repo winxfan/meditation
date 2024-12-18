@@ -19,6 +19,8 @@ const Energy365Single = lazy(() => import("./Energy365Single"));
 
 const twelveMeet = lazy(() => import("./twelveMeet"));
 
+const Referal = lazy(() => import("./Referal"));
+
 export {
   MainPage,
   NotFoundPage,
@@ -30,4 +32,5 @@ export {
   Energy365,
   Energy365Single,
   twelveMeet,
+  Referal,
 };

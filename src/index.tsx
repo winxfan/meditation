@@ -51,6 +51,10 @@ const router = createBrowserRouter([
         element: <pages.twelveMeet />,
       },
       {
+        path: "/referal",
+        element: <pages.Referal />,
+      },
+      {
         path: "*",
         element: <pages.NotFoundPage />,
       },
