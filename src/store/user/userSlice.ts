@@ -21,9 +21,9 @@ export interface UserAuthParams {
   courseId: string
 }
 
-export const userAuth = createAsyncThunk<HttpResponse<IUser>, {email: string}>(
+export const userAuth = createAsyncThunk<HttpResponse<IUser>, ITelegramUser>(
   'user/auth',async (props) => {
-  const {data} = await getUser('ukuleleman31@gmail.com');
+  const {data} = await getUser(props);
   return data;
 });
 

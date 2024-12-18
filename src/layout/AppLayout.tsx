@@ -5,7 +5,6 @@ import {useTelegram} from "../utils/hooks/useTelegram";
 import {userAuth} from "@/store/user/userSlice";
 import {useAppDispatch} from "@/store";
 import {useParams} from "react-router-dom";
-import {getCourse} from "@/store/course/courseSlice";
 import {useAppSelector} from "@/utils/hooks/redux";
 import {LoadingStatus} from "@/constants";
 import {QuestionCircleFilled} from "@ant-design/icons";
@@ -49,9 +48,7 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
     if (userStatus === LoadingStatus.none) {
       const data = userId ? {id: userId, first_name, username}: undefined;
 
-      dispatch(userAuth({
-        email: ''
-      }));
+      dispatch(userAuth(data));
     };
   }, [userId, courseId, isAuthorized, userStatus])
 
