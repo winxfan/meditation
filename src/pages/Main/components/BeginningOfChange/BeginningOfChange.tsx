@@ -36,18 +36,18 @@ export const BeginningOfChange = () => {
 				/>
 
 				<BeginningOfChangeCard
-					isOpen={true}
+					isOpen={false}
 					pictureUrl={lesson3}
-					whenOpen=''
+					whenOpen='Скоро'
 					buttonTitle="Смотреть"
 					buttonOnClick={() => navigate(`/lesson/3`)}
 					className={css.card}
 				/>
 
 				<BeginningOfChangeCard
-					isOpen={true}
+					isOpen={false}
 					pictureUrl={lesson4}
-					whenOpen=''
+					whenOpen='Скоро'
 					buttonTitle="Смотреть"
 					buttonOnClick={() => navigate(`/lesson/4`)}
 					className={css.card}
