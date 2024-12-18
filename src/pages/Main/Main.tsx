@@ -119,7 +119,7 @@ export const Main = () => {
             pictureUrl={additionalCard3}
             size="small"
             className={css.bannerSmall}
-            buttonOnClick={() => navigate('twelvemeet')}
+            onCardClick={() => navigate('twelvemeet')}
           />
 
           <Card
