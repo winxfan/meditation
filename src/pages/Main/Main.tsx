@@ -1,24 +1,24 @@
 import { Header } from "@/components/Header";
-import css from './Main.module.scss';
-import {FeedbackSlider} from "@/pages/Main/components/FeedbackSlider";
-import {PrivateMeditationClub} from "@/pages/Main/components/PrivateMeditationClub";
-import {BeginningOfChange} from "@/pages/Main/components/BeginningOfChange";
-import {Card} from "@/features/Card";
-import banner1 from '@/assets/image/banner1.png'
-import banner2 from '@/assets/image/banner2.png'
-import banner3 from '@/assets/image/banner3.png'
-import banner4 from '@/assets/image/banner4.png'
-import banner5 from '@/assets/image/banner5.png'
-import banner6 from '@/assets/image/banner6.png'
-import banner7 from '@/assets/image/banner7.png'
-import banner8 from '@/assets/image/banner8.png'
-import additionalCard1 from '@/assets/image/additionalCard1.png'
-import additionalCard2 from '@/assets/image/additionalCard2.png'
-import additionalCard3 from '@/assets/image/additionalCard3.png'
-import additionalCard4 from '@/assets/image/additionalCard4.png'
-import {Hr} from "@/components/Hr";
-import {LevelsSlider} from "@/pages/Main/components/LevelsSlider";
-import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
+import css from "./Main.module.scss";
+import { FeedbackSlider } from "@/pages/Main/components/FeedbackSlider";
+import { PrivateMeditationClub } from "@/pages/Main/components/PrivateMeditationClub";
+import { BeginningOfChange } from "@/pages/Main/components/BeginningOfChange";
+import { Card } from "@/features/Card";
+import banner1 from "@/assets/image/banner1.png";
+import banner2 from "@/assets/image/banner2.png";
+import banner3 from "@/assets/image/banner3.png";
+import banner4 from "@/assets/image/banner4.png";
+import banner5 from "@/assets/image/banner5.png";
+import banner6 from "@/assets/image/banner6.png";
+import banner7 from "@/assets/image/banner7.png";
+import banner8 from "@/assets/image/banner8.png";
+import additionalCard1 from "@/assets/image/additionalCard1.png";
+import additionalCard2 from "@/assets/image/additionalCard2.png";
+import additionalCard3 from "@/assets/image/additionalCard3.png";
+import additionalCard4 from "@/assets/image/additionalCard4.png";
+import { Hr } from "@/components/Hr";
+import { LevelsSlider } from "@/pages/Main/components/LevelsSlider";
+import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 import {useNavigate} from "react-router-dom";
 
 export const Main = () => {
@@ -29,17 +29,13 @@ export const Main = () => {
       <Header />
 
       <div className={css.container}>
-        <FeedbackSlider/>
-        <Hr/>
-        <BeginningOfChange/>
-        <PrivateMeditationClub/>
-        <LevelsSlider/>
+        <FeedbackSlider />
+        <Hr />
+        <BeginningOfChange />
+        <PrivateMeditationClub />
+        <LevelsSlider />
 
-        <Card
-          pictureUrl={banner1}
-          size="large"
-          className={css.banner1}
-        />
+        <Card pictureUrl={banner1} size="large" className={css.banner1} />
 
         <div className={css.splitContainer}>
           <Card
@@ -125,9 +121,9 @@ export const Main = () => {
             className={css.bannerSmall}
           />
         </div>
-
-        <FixedSubscribeBtn/>
       </div>
+
+      <FixedSubscribeBtn />
     </div>
   );
 };

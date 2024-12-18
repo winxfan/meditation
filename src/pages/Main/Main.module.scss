@@ -1,8 +1,7 @@
 .container {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
   background-color: rgba(239, 236, 240, 1);
-  padding: 14px 14px;
+  padding: 10px;
   margin-top: -14px;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .splitContainer {
-  margin: 10px 0;
+  margin: 10px 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
