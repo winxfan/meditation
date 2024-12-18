@@ -1,16 +1,14 @@
+import Logo from '@/assets/image/logo.svg'
+import { UserCard } from '../UserCard'
 import css from './Header.module.scss'
-import { UserCard } from "../UserCard";
-import {Avatar} from "antd";
-import EducationIcon from "@/assets/image/education.svg";
-import Logo from '@/assets/image/logo.svg';
 
-export const Header= () => {
-  // todo: set avatar
+export const Header = () => {
+	// todo: set avatar
 
-  return (
-    <div className={css.wrapper}>
-      <Logo className={css.logo} />
-      <UserCard />
-    </div>
-  )
+	return (
+		<div className={css.wrapper}>
+			<Logo className={css.logo} />
+			<UserCard />
+		</div>
+	)
 }

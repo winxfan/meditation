@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './assets/styles/main.css'
 import { App } from './layout/App'
 import * as pages from './pages'
 import './utils/i18n'
@@ -13,8 +12,16 @@ const router = createBrowserRouter([
 		element: <App />,
 		children: [
 			{
-				path: '/',
+				path: '/?',
 				element: <pages.MainPage />,
+			},
+			{
+				path: '/twelveSteps/:id',
+				element: <pages.TwelveSteps />,
+			},
+			{
+				path: '/lesson/:id',
+				element: <pages.Lesson />,
 			},
 			{
 				path: '/bot',

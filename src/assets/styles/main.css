@@ -1,8 +1,0 @@
-@import url('../fonts/sf-pro/index.css');
-@import url('./colors.css');
-
-h1,
-h2,
-h3 {
-    letter-spacing: -0.022em;
-}
