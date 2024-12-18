@@ -1,7 +1,12 @@
 .audioPlayer {
-  background: linear-gradient(281.27deg, #007BFE 2%, #3B69FF 83.89%);
-  border-radius: 20px;
-  padding: 10px 14px 12px;
+  width: 100%;
+  //background: linear-gradient(281.27deg, #007BFE 2%, #3B69FF 83.89%);
+  //border-radius: 20px;
+  //padding: 10px 14px 12px;
+
+  audio {
+    width: 100%;
+  }
 }
 
 .playButton {
