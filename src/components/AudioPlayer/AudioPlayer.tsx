@@ -36,10 +36,14 @@ export const AudioPlayer = ({src, title}: AudioPlayerProps) => {
 				setIsLoading(false); // Аудио загружено
 			});
 
-			return () => wavesurferRef.current.destroy();
+			wavesurferRef.current.on('error', () => {
+				console.log('err')
+			});
 		} catch (err) {
 			console.log({err})
 		}
+
+		return () => wavesurferRef.current.destroy();
 	}, []);
 
 	const togglePlayPause = () => {
