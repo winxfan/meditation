@@ -45,11 +45,11 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
       return;
     }
 
-    if (userStatus === LoadingStatus.none) {
-      const data = userId ? {id: userId, first_name, username}: undefined;
-
-      dispatch(userAuth(data));
-    };
+    // if (userStatus === LoadingStatus.none) {
+    //   const data = userId ? {id: userId, first_name, username}: undefined;
+    //
+    //   dispatch(userAuth(data));
+    // };
   }, [userId, courseId, isAuthorized, userStatus])
 
   return (

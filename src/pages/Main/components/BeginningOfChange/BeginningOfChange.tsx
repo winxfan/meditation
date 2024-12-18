@@ -34,7 +34,7 @@ export const BeginningOfChange = () => {
 					pictureUrl={lesson2}
 					whenOpen=''
 					buttonTitle="Смотреть"
-					buttonOnClick={() => navigate(`/lesson/2`)}
+					// buttonOnClick={}
 					className={css.card}
 					topText="ЧАСТЬ 2"
 					description="Внутренние барьеры: что удерживает вас
