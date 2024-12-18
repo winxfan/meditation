@@ -6,8 +6,11 @@ import energyBg from "@/assets/image/energy365-hero.jpg";
 
 import { Energy365Item } from "./components/Energy365Item";
 import { energyList } from "@/data/energyList";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 export const Energy365 = () => {
+  useBackButton();
+
   return (
     <div>
       <Header />

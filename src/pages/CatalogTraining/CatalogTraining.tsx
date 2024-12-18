@@ -4,8 +4,11 @@ import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 import { CatalogItem } from "./components/CatalogItem";
 
 import { catalogList } from "@/data/catalogList";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 export const CatalogTraining = () => {
+  useBackButton();
+
   return (
     <div>
       <Header />

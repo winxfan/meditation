@@ -8,12 +8,14 @@ import {RuTubeVideo} from "@/features/RutubeVideo/RutubeVideo";
 import {lessonData} from "@/pages/Lesson/data";
 
 import image1 from '@/assets/image/catalogItem-1.jpg';
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 
 export const CatalogTrainingSingle = () => {
-
-    const { id = 1} = useParams();
+  const { id = 1} = useParams();
   const currentLesson = lessonData.find((item) => item.id === +id);
+
+  useBackButton();
 
   return (
     <div>

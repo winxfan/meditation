@@ -3,8 +3,11 @@ import css from "./Energy365Single.module.scss";
 import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 
 import image from "@/assets/image/energy-image.jpg";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 export const Energy365Single = () => {
+  useBackButton();
+
   return (
     <div>
       <Header />

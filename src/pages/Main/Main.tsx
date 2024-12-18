@@ -35,7 +35,12 @@ export const Main = () => {
         <PrivateMeditationClub />
         <LevelsSlider />
 
-        <Card pictureUrl={banner1} size="large" className={css.banner1} />
+        <Card
+          pictureUrl={banner1}
+          size="large"
+          className={css.banner1}
+          onCardClick={() => navigate('/energy365')}
+        />
 
         <div className={css.splitContainer}>
           <Card
@@ -75,6 +80,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           buttonTitle="Начать тренировки"
+          buttonOnClick={() => navigate('catalogtraining')}
         />
 
         <Card
@@ -113,6 +119,7 @@ export const Main = () => {
             pictureUrl={additionalCard3}
             size="small"
             className={css.bannerSmall}
+            buttonOnClick={() => navigate('twelvemeet')}
           />
 
           <Card

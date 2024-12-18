@@ -12,8 +12,11 @@ import image3 from "@/assets/image/twelveCard-3.jpg";
 import image4 from "@/assets/image/twelveCard-4.jpg";
 import image5 from "@/assets/image/twelveCard-5.jpg";
 import image6 from "@/assets/image/twelveCard-6.jpg";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 export const twelveMeet = () => {
+  useBackButton();
+
   return (
     <div>
       <Header />

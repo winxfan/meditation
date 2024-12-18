@@ -10,6 +10,7 @@ export interface CardProps {
 	variant?: 'light' | 'black' | 'transparent';
 	pictureUrl?: string;
 	buttonOnClick?: () => void;
+	onCardClick?: () => void;
 	buttonTitle?: string;
 	align?: 'left' | 'right';
 	size?: 'large' | 'small';
@@ -35,6 +36,7 @@ export const Card = (props: CardProps) => {
 		className,
 		descriptionLight,
 		buttonClassName,
+		onCardClick,
 	} = props;
 
 	return (
@@ -43,6 +45,7 @@ export const Card = (props: CardProps) => {
 			style={{
 				backgroundImage: `url(${pictureUrl})`
 			}}
+			onClick={onCardClick}
 		>
 			<div
 				className={css.content}
