@@ -84,7 +84,7 @@ const PageSergay = () => {
                 </Typography.Text>
             </Button>
 
-            <FixedSubscribeBtn/>
+            <FixedSubscribeBtn className={cl.fixedbutton}/>
         </div>
     );
 };
