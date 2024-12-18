@@ -17,25 +17,29 @@ export const AudioPlayer = ({src, title}: AudioPlayerProps) => {
 	const [isLoading, setIsLoading] = useState(true); // Состояние загрузки
 
 	useEffect(() => {
-		wavesurferRef.current = WaveSurfer.create({
-			container: containerRef?.current,
-			waveColor: '#4f80ff',
-			progressColor: '#fff',
-			cursorColor: '#ffffff',
-			height: 60,
-		});
+		try {
+			wavesurferRef.current = WaveSurfer.create({
+				container: containerRef?.current,
+				waveColor: '#4f80ff',
+				progressColor: '#fff',
+				cursorColor: '#ffffff',
+				height: 60,
+			});
 
-		wavesurferRef.current.load(src);
+			wavesurferRef.current.load(src);
 
-		// Показываем состояние загрузки
-		setIsLoading(true);
+			// Показываем состояние загрузки
+			setIsLoading(true);
 
-		// Обработчик события загрузки аудиофайла
-		wavesurferRef.current.on('ready', () => {
-			setIsLoading(false); // Аудио загружено
-		});
+			// Обработчик события загрузки аудиофайла
+			wavesurferRef.current.on('ready', () => {
+				setIsLoading(false); // Аудио загружено
+			});
 
-		return () => wavesurferRef.current.destroy();
+			return () => wavesurferRef.current.destroy();
+		} catch (err) {
+			console.log({err})
+		}
 	}, []);
 
 	const togglePlayPause = () => {
