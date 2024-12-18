@@ -1,0 +1,125 @@
+.page_sergay {
+    padding: 14px 10px;
+    background-color: #fbfafa;
+}
+
+.main {
+    margin-bottom: 40px;
+    padding-bottom: 20%;
+}
+
+.main__title {
+    line-height: 25px !important;
+    margin-bottom: 7px !important;
+    max-width: 190px;
+}
+
+.main__label {
+    margin-bottom: 12px !important;
+    border-radius: 8px;
+    background-color: white;
+    color: #21283180 !important;
+    max-width: 50%;
+    width: fit-content;
+    padding: 4px;
+    font-weight: 600 !important;
+}
+
+.main__text {
+    margin-bottom: 0 !important;
+    opacity: 0.5;
+    font-size: 12px !important;
+    line-height: 24px !important;
+    max-width: 50%;
+}
+
+.rabors {
+    margin-bottom: 40px !important;
+}
+
+.rabors__title {
+    margin-bottom: 20px !important;
+    font-size: 21px !important;
+    color: #1e1e1e !important;
+    line-height: 15px !important;
+}
+
+.rabors__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rabors__list__item {
+    border-radius: 18px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    background-color: white;
+    box-shadow: 0 0 16px 0 #f3f3f3;
+}
+
+.rabors__list__item__image {
+    width: 96px;
+    min-width: 96px;
+    height: 128px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.rabors__list__item__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rabors__list__item__text__title {
+    font-size: 16px !important;
+    line-height: 19.2px !important;
+    font-weight: 700 !important;
+    margin-bottom: 0 !important;
+}
+
+.rabors__list__item__text__descr {
+    margin-bottom: 0 !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 15.2px !important;
+    color: #727171 !important;
+}
+
+.btn_go_bot {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #3c9834;
+    height: 50px;
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.btn_go_bot__text {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 23px !important;
+    color: white !important;
+    letter-spacing: -0.0275em;
+}
+
+.button_price {
+    width: 100%;
+}
+
+@media (max-width: 400px) {
+    .main__label {
+        max-width: 70%;
+    }
+
+    .main__text {
+        max-width: 60%;
+    }
+}

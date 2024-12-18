@@ -1,37 +1,17 @@
 .container {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background-color: rgba(239, 236, 240, 1);
-  padding: 14px 14px;
+    padding: 14px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgba(239, 236, 240, 1);
 }
 
 .banner {
-  margin: 10px 0;
-  aspect-ratio: 340 / 177;
-  height: auto !important;
-  background-size: contain;
-}
-
-.banner2 {
-  aspect-ratio: 340 / 180;
-  margin: 10px 0;
-  height: auto !important;
-  background-size: contain;
-}
-
-.bannerSmall {
-  aspect-ratio: 165 / 177;
-  height: auto !important;
-  background-size: contain;
+    margin: 10px 0;
 }
 
 .splitContainer {
-  margin: 10px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.absoluteBtn {
-  left: 44% !important;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }

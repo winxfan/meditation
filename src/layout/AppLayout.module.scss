@@ -1,49 +1,49 @@
-*, body {
-  margin: 0;
-  font-family: 'SF Pro Rounded', sans-serif;
-  box-sizing: border-box !important;
+*,
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box !important;
 }
 
 .dark {
-  --app-bg-color: #101011;
-  --app-text-color: #fff;
-  --app-black-text-color: #000;
-  --app-opacity-bg: #222326;
-  --app-transparent-black-button: #fff;
+    --app-bg-color: #101011;
+    --app-text-color: #fff;
+    --app-black-text-color: #000;
+    --app-opacity-bg: #222326;
+    --app-transparent-black-button: #fff;
 
-  --app-lesson-passed: #2b2c2d;
-  --app-lesson-locked: #222326;
+    --app-lesson-passed: #2b2c2d;
+    --app-lesson-locked: #222326;
 
-  --app-module-passed: #56A54FFF;
-  --app-module-current: #1D5CBE;
-  --app-module-locked: #DEDEE7;
+    --app-module-passed: #56a54fff;
+    --app-module-current: #1d5cbe;
+    --app-module-locked: #dedee7;
 
-  --error-color: #e51c1c;
+    --error-color: #e51c1c;
 }
 
 .light {
-  --app-bg-color: rgba(237, 237, 244, 0.78);
-  --app-text-color: #222326;
-  --app-black-text-color: #fff;
-  --app-opacity-bg: #fff;
-  --app-transparent-black-button: #222326;
+    --app-bg-color: rgba(237, 237, 244, 0.78);
+    --app-text-color: #222326;
+    --app-black-text-color: #fff;
+    --app-opacity-bg: #fff;
+    --app-transparent-black-button: #222326;
 
-  --app-lesson-passed: #fff;
-  --app-lesson-locked: #eae9e9;
+    --app-lesson-passed: #fff;
+    --app-lesson-locked: #eae9e9;
 
-  --app-module-passed: #56A54FFF;
-  --app-module-current: #1D5CBE;
-  --app-module-locked: #DEDEE7;
+    --app-module-passed: #56a54fff;
+    --app-module-current: #1d5cbe;
+    --app-module-locked: #dedee7;
 
-  --error-color: #e51c1c;
+    --error-color: #e51c1c;
 }
 
 .layout {
-  margin: 0 auto;
-  display: block;
-  max-width: 425px;
-  min-height: 100vh;
-  position: relative;
-  //background-color: var(--app-bg-color);
-  //color: var(--app-text-color);
+    margin: 0 auto;
+    display: block;
+    max-width: 562px;
+    min-height: 100vh;
+    //background-color: var(--app-bg-color);
+    //color: var(--app-text-color);
 }

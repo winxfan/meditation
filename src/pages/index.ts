@@ -1,16 +1,11 @@
 import { lazy } from 'react';
 
 const MainPage = lazy(() => import('./Main'));
+const PageBase = lazy(() => import('./PageBase'));
+const PageBot = lazy(() => import('./PageBot'));
+const PagePracties = lazy(() => import('./PagePracties'));
+const PageSergay = lazy(() => import('./PageSergay'));
 const NotFoundPage = lazy(() => import('./NotFoundPage'));
-
 const AuthPage = lazy(() => import('./Auth'));
-const Base70Practics = lazy(() => import('./Base70Practics'));
 
-
-export {
-	MainPage,
-	NotFoundPage,
-	AuthPage,
-	Base70Practics,
-}
-
+export { MainPage, PageBase, PageBot, PagePracties, PageSergay, NotFoundPage, AuthPage };

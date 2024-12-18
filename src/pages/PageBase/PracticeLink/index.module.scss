@@ -1,0 +1,48 @@
+.link_wrapper {
+    text-decoration: none;
+}
+
+.practice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.visual {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.visual__img {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    img {
+        border-radius: 12px;
+    }
+}
+
+.visual__title {
+    color: #333333 !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 0 !important;
+}
+
+.link {
+    background-color: var(--main-color);
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
