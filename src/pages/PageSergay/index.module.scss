@@ -1,6 +1,7 @@
 .page_sergay {
     padding: 14px 10px;
     background-color: #fbfafa;
+    white-space: pre-line;
 }
 
 .main {
@@ -34,20 +35,23 @@
 }
 
 .rabors {
-    margin-bottom: 40px !important;
+    margin-top: 28px;
+    margin-bottom: 40px;
 }
 
 .rabors__title {
-    margin-bottom: 20px !important;
-    font-size: 21px !important;
-    color: #1e1e1e !important;
-    line-height: 15px !important;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 21px;
+    color: #1e1e1e;
+    line-height: 15px;
 }
 
 .rabors__list {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-top: 19px;
 }
 
 .rabors__list__item {
@@ -103,14 +107,6 @@
     &:hover {
         background: #3c9834 !important;
     }
-}
-
-.btn_go_bot__text {
-    font-weight: 600 !important;
-    font-size: 16px !important;
-    line-height: 23px !important;
-    color: white !important;
-    letter-spacing: -0.0275em;
 }
 
 .button_price {

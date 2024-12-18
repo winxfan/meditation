@@ -48,6 +48,7 @@ export const Main = () => {
             size="small"
             className={css.bannerSmall}
             buttonTitle="Вступить"
+            onCardClick={() => navigate('/community')}
           />
 
           <Card
@@ -55,7 +56,7 @@ export const Main = () => {
             buttonTitle="Подключить"
             size="small"
             className={css.bannerSmall}
-            buttonOnClick={() => navigate('/bot')}
+            onCardClick={() => navigate('/bot')}
           />
         </div>
 
@@ -64,7 +65,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           buttonTitle="Перейти к практикам"
-          buttonOnClick={() => navigate('/practices')}
+          onCardClick={() => navigate('/practices')}
         />
 
         <Card
@@ -72,7 +73,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           buttonTitle="Перейти к практикам"
-          buttonOnClick={() => navigate('/base')}
+          onCardClick={() => navigate('/base')}
         />
 
         <Card
@@ -80,7 +81,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           buttonTitle="Начать тренировки"
-          buttonOnClick={() => navigate('catalogtraining')}
+          onCardClick={() => navigate('catalogtraining')}
         />
 
         <Card
@@ -91,7 +92,7 @@ export const Main = () => {
           buttonTitle="Начать тренировки"
           buttonClassName={css.absoluteBtn}
           variant="black"
-          buttonOnClick={() => navigate('/sergey')}
+          onCardClick={() => navigate('/sergey')}
         />
 
         <Card

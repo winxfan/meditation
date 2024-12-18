@@ -58,6 +58,10 @@ const router = createBrowserRouter([
         path: "/energy365",
         element: <pages.Energy365 />,
       },
+	    {
+		    path: "/community",
+		    element: <pages.Community />,
+	    },
       {
         path: "/energy365/:id",
         element: <pages.Energy365Single />,

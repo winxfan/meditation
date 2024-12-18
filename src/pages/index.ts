@@ -22,6 +22,7 @@ const Energy365 = lazy(() => import("./Energy365"));
 const Energy365Single = lazy(() => import("./Energy365Single"));
 
 const twelveMeet = lazy(() => import("./twelveMeet"));
+const Community = lazy(() => import("./Community"));
 
 export {
 	MainPage,
@@ -38,4 +39,5 @@ export {
 	Energy365,
   Energy365Single,
   twelveMeet,
+	Community,
 }
