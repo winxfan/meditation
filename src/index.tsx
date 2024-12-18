@@ -43,6 +43,10 @@ const router = createBrowserRouter([
         element: <pages.Energy365 />,
       },
       {
+        path: "/energy365/:id",
+        element: <pages.Energy365Single />,
+      },
+      {
         path: "*",
         element: <pages.NotFoundPage />,
       },
