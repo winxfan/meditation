@@ -1,4 +1,4 @@
-import css from "./twelveCard.module.scss";
+import css from "./TwelveCard.module.scss";
 
 interface TwelveCardProps {
   title: string;
