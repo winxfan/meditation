@@ -10,7 +10,7 @@ export const FeedbackCard = (props: FeedbackCardProps) => {
 
 	const expand = () => setIsExpanded(true);
 
-	const isExceeded = props.description.length > 200;
+	const isExceeded = props.description.length >= 200;
 	const formattedDescription = !isExpanded ? props.description.slice(0, 200) : props.description;
 
 	return (

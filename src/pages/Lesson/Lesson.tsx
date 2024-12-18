@@ -6,7 +6,6 @@ import {RuTubeVideo} from "@/features/RutubeVideo/RutubeVideo";
 import {lessonData} from "@/pages/Lesson/data";
 import HomeworkIcon from '@/assets/image/homework.svg'
 import {AudioPlayer} from "@/components/AudioPlayer/AudioPlayer";
-import practice1Audio from './data/practice1.mp3'
 
 export const Lesson = () => {
   const { id = 1} = useParams();
@@ -25,7 +24,10 @@ export const Lesson = () => {
           />
         </div>
 
-        <AudioPlayer src={practice1Audio} title="Пробуждение внутренней силы"/>
+
+        {currentLesson.audioLink && (
+          <AudioPlayer src={currentLesson.audioLink} title={currentLesson.audioTitle}/>
+        )}
 
         <div className={css.homework}>
           <div className={css.homeworkHeader}>
