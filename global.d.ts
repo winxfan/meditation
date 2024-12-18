@@ -19,3 +19,8 @@ declare module "*.svg" {
 }
 
 // declare const __PLATFORM__: 'desktop' | 'mobile';
+
+declare module "*.mp3" {
+	const src: string;
+	export default src;
+}

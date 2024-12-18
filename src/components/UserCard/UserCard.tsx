@@ -10,7 +10,7 @@ import {Avatar} from "antd";
 import EducationIcon from "@/assets/image/education.svg";
 
 export const UserCard = () => {
-  const { first_name, username, avatar } = useAppSelector(store => store.user.data)
+  const { first_name, username, avatar } = useAppSelector(store => store.user.data) ?? {};
   const userStatus = useAppSelector(store => store.user.status)
   const { initDataUnsafe, WebAppUser } = useTelegram();
 

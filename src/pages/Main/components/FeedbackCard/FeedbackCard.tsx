@@ -1,6 +1,17 @@
 import css from './FeedbackCard.module.scss';
+import {useState} from "react";
 
-export const FeedbackCard = () => {
+interface FeedbackCardProps {
+	description: string
+}
+
+export const FeedbackCard = (props: FeedbackCardProps) => {
+	const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+	const expand = () => setIsExpanded(true);
+
+	const isExceeded = props.description.length > 200;
+	const formattedDescription = !isExpanded ? props.description.slice(0, 200) : props.description;
 
 	return (
 		<div className={css.container}>
@@ -10,15 +21,17 @@ export const FeedbackCard = () => {
 
 			<div className={css.body}>
 				<p className={css.title}>
-					Каждый месяц вы будете получать новое звание внутри платформы и уникальными скетч картинками отражающими ваш прогресс
+					{formattedDescription}
 				</p>
 			</div>
 
-			<div className={css.footer}>
-				<button className={css.readMore}>
-					Читать полностью
-				</button>
-			</div>
+			{(isExceeded && !isExpanded) && (
+				<div className={css.footer}>
+					<button className={css.readMore} onClick={expand}>
+						Читать полностью
+					</button>
+				</div>
+			)}
 		</div>
 	)
 }

@@ -1,11 +1,14 @@
 import css from './BeginningOfChange.module.scss';
 import {BeginningOfChangeCard} from "@/pages/Main/components/BeginningOfChangeCard";
-import lesson1 from '@/assets/image/lesson1.jpg'
-import lesson2 from '@/assets/image/lesson2.jpg'
-import lesson3 from '@/assets/image/lesson3.jpg'
-import lesson4 from '@/assets/image/lesson4.jpg'
+import lesson1 from '@/assets/image/lessonBanner1.png'
+import lesson2 from '@/assets/image/lessonBanner2.png'
+import lesson3 from '@/assets/image/lessonBanner3.png'
+import lesson4 from '@/assets/image/lessonBanner4.png'
+import {useNavigate} from "react-router-dom";
 
 export const BeginningOfChange = () => {
+	const navigate = useNavigate()
+
 	return (
 		<div className={css.container}>
 			<div className={css.header}>
@@ -15,48 +18,39 @@ export const BeginningOfChange = () => {
 
 			<div className={css.body}>
 				<BeginningOfChangeCard
-					topText="Урок 1"
-					description="Цена перемен: как
-					я потерял 50 миллионов
-					и нашёл путь к новой реальности"
 					isOpen={true}
 					pictureUrl={lesson1}
 					whenOpen=''
-					// buttonOnClick='link'
+					buttonOnClick={() => navigate(`/lesson/1`)}
 					buttonTitle="Смотреть"
+					className={css.card}
 				/>
 
 				<BeginningOfChangeCard
-					topText="Урок 2"
-					description="Внутренние барьеры: что удерживает вас
-от новой жизни "
-					isOpen={false}
+					isOpen={true}
 					pictureUrl={lesson2}
-					whenOpen='25 октября'
+					whenOpen=''
 					buttonTitle="Смотреть"
+					buttonOnClick={() => navigate(`/lesson/2`)}
+					className={css.card}
 				/>
 
 				<BeginningOfChangeCard
-					topText="Урок 3"
-					description="Освобождение
-от прошлого:
-как перестать тянуть боль
-за собой"
-					isOpen={false}
+					isOpen={true}
 					pictureUrl={lesson3}
-					whenOpen='25 октября'
+					whenOpen=''
 					buttonTitle="Смотреть"
+					buttonOnClick={() => navigate(`/lesson/3`)}
+					className={css.card}
 				/>
 
 				<BeginningOfChangeCard
-					topText="Урок 4"
-					description="12 шагов
-к кардинальным переменам
-в жизни"
-					isOpen={false}
+					isOpen={true}
 					pictureUrl={lesson4}
-					whenOpen='25 октября'
+					whenOpen=''
 					buttonTitle="Смотреть"
+					buttonOnClick={() => navigate(`/lesson/4`)}
+					className={css.card}
 				/>
 			</div>
 		</div>
