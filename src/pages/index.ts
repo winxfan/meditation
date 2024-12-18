@@ -17,6 +17,8 @@ const Energy365 = lazy(() => import("./Energy365"));
 
 const Energy365Single = lazy(() => import("./Energy365Single"));
 
+const twelveMeet = lazy(() => import("./twelveMeet"));
+
 export {
   MainPage,
   NotFoundPage,
@@ -27,4 +29,5 @@ export {
   CatalogTrainingSingle,
   Energy365,
   Energy365Single,
+  twelveMeet,
 };
