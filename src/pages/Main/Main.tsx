@@ -19,8 +19,11 @@ import additionalCard4 from '@/assets/image/additionalCard4.png'
 import {Hr} from "@/components/Hr";
 import {LevelsSlider} from "@/pages/Main/components/LevelsSlider";
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
+import {useNavigate} from "react-router-dom";
 
 export const Main = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <Header />
@@ -51,6 +54,7 @@ export const Main = () => {
             buttonTitle="Подключить"
             size="small"
             className={css.bannerSmall}
+            buttonOnClick={() => navigate('/bot')}
           />
         </div>
 
@@ -59,6 +63,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           buttonTitle="Перейти к практикам"
+          buttonOnClick={() => navigate('/practices')}
         />
 
         <Card
@@ -66,6 +71,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           buttonTitle="Перейти к практикам"
+          buttonOnClick={() => navigate('/base')}
         />
 
         <Card
@@ -80,9 +86,10 @@ export const Main = () => {
           size="large"
           className={css.banner2}
           align="right"
-          buttonTitle="Скоро откроется"
+          buttonTitle="Начать тренировки"
           buttonClassName={css.absoluteBtn}
           variant="black"
+          buttonOnClick={() => navigate('/sergey')}
         />
 
         <Card

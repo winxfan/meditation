@@ -27,6 +27,22 @@ const router = createBrowserRouter([
 				element: <pages.Lesson/>,
 			},
 			{
+				path: "/bot",
+				element: <pages.PageBot/>,
+			},
+			{
+				path: "/base",
+				element: <pages.PageBase/>,
+			},
+			{
+				path: "/practices",
+				element: <pages.PagePracties/>,
+			},
+			{
+				path: "/sergey",
+				element: <pages.PageSergay/>,
+			},
+			{
 				path: "auth/:token?",
 				element: <pages.AuthPage/>,
 			},

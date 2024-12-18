@@ -20,9 +20,9 @@ export interface AppLayoutProps {
 export const AppLayout: FC<AppLayoutProps> = ({children}) => {
   const { courseId = DEFAULT_COURSE_ID} = useParams();
   const dispatch = useAppDispatch();
-  const { colorScheme = 'light', expand, initDataUnsafe } = useTelegram();
+  const { colorScheme = 'light', expand, initDataUnsafe } = useTelegram() ?? {};
   const isAuthorized = useAppSelector((state) => state.user.isAuthorized);
-  const {id: userId, first_name, username} = initDataUnsafe.user ?? {};
+  const {id: userId, first_name, username} = initDataUnsafe?.user ?? {};
 
   const userStatus = useAppSelector((state) => state.user.status);
   const courseStatus = useAppSelector((state) => state.course.status);
