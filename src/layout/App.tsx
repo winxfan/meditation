@@ -12,7 +12,7 @@ export const App = () => {
   const { expand, enableClosingConfirmation } = useTelegram();
 
   return (
-    <ErrorCatch>
+    // <ErrorCatch>
       <Provider store={store}>
         <QueryParamProvider adapter={ReactRouter6Adapter}>
           <AppLayout>
@@ -22,6 +22,6 @@ export const App = () => {
           </AppLayout>
         </QueryParamProvider>
       </Provider>
-    </ErrorCatch>
+    // </ErrorCatch>
   );
 };
