@@ -1,13 +1,12 @@
 import css from "./FixedSubscribeBtn.module.scss";
-import {Button} from "@/components/Button";
 
 export const FixedSubscribeBtn = () => {
-	return (
-		<div className={css.fixedButtonContainer}>
-			<Button variant="violet" size="large" className={css.subscribeBtn} fullWidth>
-				<p className={css.subscribeBtnTitle}>Открыть полный доступ</p>
-				<span className={css.subscribeBtnPrice}>4 990₽/мес</span>
-			</Button>
-		</div>
-	)
-}
+  return (
+    <div className={css.fixedButtonContainer}>
+      <div className={css.subscribeBtn}>
+        <p className={css.subscribeBtnTitle}>Открыть полный доступ</p>
+        <span className={css.subscribeBtnPrice}>4 990₽/мес</span>
+      </div>
+    </div>
+  );
+};
