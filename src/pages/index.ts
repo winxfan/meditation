@@ -11,6 +11,8 @@ const Lesson = lazy(() => import('./Lesson'));
 
 const CatalogTraining = lazy(() => import('./CatalogTraining'));
 
+const CatalogTrainingSingle = lazy(() => import('./CatalogTrainingSingle'));
+
 export {
 	MainPage,
 	NotFoundPage,
@@ -18,5 +20,6 @@ export {
 	TwelveSteps,
 	Lesson,
 	CatalogTraining,
+	CatalogTrainingSingle,
 }
 

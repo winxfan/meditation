@@ -1,0 +1,27 @@
+.container {
+    padding: 14px 10px 0;
+}
+
+.training {
+    padding: 16px;
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 246px;
+    &.white {
+        color: #fff;
+    }
+}
+
+.training__title {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    max-width: 200px;
+}
+
+.training__video {
+    margin-top: 10px;
+}
