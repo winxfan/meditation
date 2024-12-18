@@ -27,7 +27,7 @@ export const lessonData = [
 		id: 3,
 		pictureSrc: banner3,
 		homeworkDescription: 'Напишите, что вы почувствовали после прохождения практика на уровне эмоций и на уровне эмоций? Какие осознания к вам пришли во время урока и выполнения практики?',
-		videoId: '/f4692face6409594ef6302297520dd9c/?p=94Gm8JzvseYVK0o9SOYJxA/?p=94Gm8JzvseYVK0o9SOYJxA',
+		// videoId: '/f4692face6409594ef6302297520dd9c/?p=94Gm8JzvseYVK0o9SOYJxA/?p=94Gm8JzvseYVK0o9SOYJxA',
 		audioTitle: "Освобождение от обид и травм прошлого",
 		audioLink: audio3
 	},
@@ -35,6 +35,6 @@ export const lessonData = [
 		id: 4,
 		pictureSrc: banner4,
 		homeworkDescription: 'Напишите, что вы почувствовали после прохождения практика на уровне эмоций и на уровне эмоций? Какие осознания к вам пришли во время урока и выполнения практики?',
-		videoId: '/f4692face6409594ef6302297520dd9c/?p=94Gm8JzvseYVK0o9SOYJxA/?p=94Gm8JzvseYVK0o9SOYJxA',
+		// videoId: '/f4692face6409594ef6302297520dd9c/?p=94Gm8JzvseYVK0o9SOYJxA/?p=94Gm8JzvseYVK0o9SOYJxA',
 	},
 ]
