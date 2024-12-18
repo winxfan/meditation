@@ -3,6 +3,7 @@ import WaveSurfer from "wavesurfer.js";
 import css from './AudioPlayer.module.scss';
 import PlayIcon from '@/assets/image/audioPlay.svg';
 import PauseIcon from '@/assets/image/audioPause.svg';
+import axios from "axios";
 
 interface AudioPlayerProps {
 	src: string;
