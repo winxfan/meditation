@@ -1,4 +1,5 @@
 import css from "./TwelveCard.module.scss";
+import React from "react";
 
 interface TwelveCardProps {
   title: string;
