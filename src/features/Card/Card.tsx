@@ -1,19 +1,23 @@
-import css from './Card.module.scss';
-import cs from "classnames";
-import {Button} from "@/components/Button";
+import css from './Card.module.scss'
+import cs from 'classnames'
+import { Button } from '@/components/Button'
 
 export interface CardProps {
-	title?: string;
-	description?: string;
-	topText?: string;
-	variant?: 'light' | 'black' | 'transparent';
-	pictureUrl?: string;
-	buttonOnClick?: () => void;
-	buttonTitle?: string;
-	align?: 'left' | 'right';
-	size?: 'large' | 'small';
-	contentWidth?: string;
-	className?: string;
+	title?: string
+	description?: string
+	descriptionLight?: boolean
+	topText?: string
+	variant?: 'light' | 'black' | 'transparent'
+	pictureUrl?: string
+	buttonOnClick?: () => void
+	buttonTitle?: string
+	align?: 'left' | 'right'
+	size?: 'large' | 'small'
+	titleWidth?: string
+	descriptionWidth?: string
+	contentWidth?: string
+	className?: string
+	buttonClassName?: string
 }
 
 export const Card = (props: CardProps) => {
@@ -27,40 +31,59 @@ export const Card = (props: CardProps) => {
 		buttonTitle,
 		align,
 		size = 'small',
-		contentWidth = '100%',
+		titleWidth = '100%',
+		descriptionWidth = '100%',
 		className,
-	} = props;
+		descriptionLight,
+		buttonClassName,
+		contentWidth = '100%',
+	} = props
 
 	return (
 		<div
 			className={cs(css.container, variant, align, size, className)}
 			style={{
-				backgroundImage: `url(${pictureUrl})`
+				backgroundImage: `url(${pictureUrl})`,
 			}}
 		>
 			<div
 				className={css.content}
 				style={{
-					maxWidth: contentWidth
+					maxWidth: contentWidth,
 				}}
 			>
-				{topText && (
-					<p className={css.topText}>{topText}</p>
-				)}
+				{topText && <p className={css.topText}>{topText}</p>}
 
 				{title && (
-					<p className={css.title}>{title}</p>
+					<p
+						className={css.title}
+						style={{
+							maxWidth: titleWidth,
+						}}
+					>
+						{title}
+					</p>
 				)}
 
 				{description && (
-					<p className={css.description}>{description}</p>
+					<p
+						className={cs(
+							css.description,
+							descriptionLight && css.descriptionLight
+						)}
+						style={{
+							maxWidth: descriptionWidth,
+						}}
+					>
+						{description}
+					</p>
 				)}
 
 				{buttonTitle && (
 					<Button
 						variant={variant === 'white' ? 'white' : 'violet'}
-						size="small"
-						className={css.button}
+						size='small'
+						className={cs(css.button, buttonClassName)}
 						onClick={buttonOnClick}
 					>
 						{buttonTitle}
