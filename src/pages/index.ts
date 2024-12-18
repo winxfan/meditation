@@ -9,11 +9,14 @@ const TwelveSteps = lazy(() => import('./TwelveSteps'));
 
 const Lesson = lazy(() => import('./Lesson'));
 
+const CatalogTraining = lazy(() => import('./CatalogTraining'));
+
 export {
 	MainPage,
 	NotFoundPage,
 	AuthPage,
 	TwelveSteps,
 	Lesson,
+	CatalogTraining,
 }
 

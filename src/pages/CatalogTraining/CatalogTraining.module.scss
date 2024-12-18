@@ -1,0 +1,15 @@
+.container {
+    padding: 14px 10px 0;
+}
+
+.title {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
