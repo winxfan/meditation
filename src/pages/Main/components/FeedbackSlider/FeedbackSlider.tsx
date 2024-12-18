@@ -4,7 +4,6 @@ import css from './FeedbackSlider.module.scss'
 import {data} from "@/pages/Main/components/FeedbackSlider/data";
 
 export const FeedbackSlider = () => {
-
 	return (
 		<div>
 			<Swiper

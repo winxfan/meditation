@@ -8,6 +8,7 @@
   position: relative;
   display: flex;
   color: white;
+  white-space: pre-line;
 
   &:global(.right) {
     justify-content: right;
@@ -19,22 +20,22 @@
 
   &:global(.large) {
     .title {
-      font-size: 21px;
+      font-size: 23px;
     }
 
     .description {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
   &:global(.small){
     .title {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
     }
 
     .description {
-      font-size: 11px;
+      font-size: 13px;
     }
   }
 
@@ -44,11 +45,11 @@
 }
 
 .content {
-  max-width: 60%;
+  //max-width: 60%;
 }
 
 .topText {
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 500;
   line-height: 10px;
   letter-spacing: 0.11em;

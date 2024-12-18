@@ -89,7 +89,7 @@ export const Main = () => {
           size="large"
           className={css.banner2}
           align="right"
-          buttonTitle="Начать тренировки"
+          buttonTitle="Получить разбор"
           buttonClassName={css.absoluteBtn}
           variant="black"
           onCardClick={() => navigate('/sergey')}
