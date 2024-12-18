@@ -15,8 +15,11 @@ import Vector from '@/assets/icons/vector.svg';
 import cl from './index.module.scss';
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 import banner from "@/assets/image/PageBanner42Practicies.png";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 const PagePracties = () => {
+    useBackButton();
+
     return (
         <div className={cl.page_practicies}>
             <img src={banner} className={cl.banner} />

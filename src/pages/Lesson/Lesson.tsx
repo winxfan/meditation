@@ -6,10 +6,12 @@ import {RuTubeVideo} from "@/features/RutubeVideo/RutubeVideo";
 import {lessonData} from "@/pages/Lesson/data";
 import HomeworkIcon from '@/assets/image/homework.svg'
 import {AudioPlayer} from "@/components/AudioPlayer/AudioPlayer";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 export const Lesson = () => {
   const { id = 1} = useParams();
   const currentLesson = lessonData.find((item) => item.id === +id);
+  useBackButton();
 
   return (
     <div>

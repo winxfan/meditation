@@ -7,10 +7,13 @@ import PracticeLink from './PracticeLink';
 import { practies } from '@/data/page_base';
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 import banner from '@/assets/image/PageBanner70Practicies.png'
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 const { Paragraph, Title } = Typography;
 
 const PageBase = () => {
+  useBackButton();
+
     return (
         <div className={cl.page_base}>
             <img src={banner} className={cl.banner} />

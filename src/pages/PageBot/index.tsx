@@ -5,8 +5,11 @@ import RoundBlock from '@/components/RoundBlock';
 import { Typography } from 'antd';
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 import banner from "@/assets/image/PageBannerBot.png";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 const PageBot = () => {
+  useBackButton();
+
     return (
         <div className={cl.page_bot}>
           <img src={banner} className={cl.banner} />

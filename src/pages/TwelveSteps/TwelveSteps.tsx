@@ -5,8 +5,10 @@ import {DEFAULT_COURSE_ID} from "@/store/user/data";
 import {useParams} from "react-router-dom";
 import {RuTubeVideo} from "@/features/RutubeVideo/RutubeVideo";
 import {twelveStepsData} from "@/pages/TwelveSteps/data";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 export const TwelveSteps = () => {
   const { id = 1} = useParams();
+  useBackButton();
 
   const currentStep = twelveStepsData.find((item) => item.id === +id);
 

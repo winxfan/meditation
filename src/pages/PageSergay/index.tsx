@@ -8,8 +8,11 @@ import razbor_2 from '@/assets/image/razbor_2.png';
 import razbor_3 from '@/assets/image/razbor_3.png';
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 import banner from "@/assets/image/PageBannerSergey.png";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 const PageSergay = () => {
+    useBackButton();
+
     return (
         <div className={cl.page_sergay}>
             <img src={banner} className={cl.banner} />
