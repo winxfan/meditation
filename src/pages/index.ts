@@ -8,10 +8,10 @@ const AuthPage = lazy(() => import("./Auth"));
 const TwelveSteps = lazy(() => import("./TwelveSteps"));
 
 const Lesson = lazy(() => import("./Lesson"));
-const PageBot = lazy(() => import('./PageBot'));
-const PageBase = lazy(() => import('./PageBase'));
-const PagePracties = lazy(() => import('./PagePracties'));
-const PageSergay = lazy(() => import('./PageSergay'));
+const PageBot = lazy(() => import("./PageBot"));
+const PageBase = lazy(() => import("./PageBase"));
+const PagePracties = lazy(() => import("./PagePracties"));
+const PageSergay = lazy(() => import("./PageSergay"));
 
 const CatalogTraining = lazy(() => import("./CatalogTraining"));
 
@@ -23,19 +23,22 @@ const Energy365Single = lazy(() => import("./Energy365Single"));
 
 const twelveMeet = lazy(() => import("./twelveMeet"));
 
+const Referal = lazy(() => import("./Referal"));
+
 export {
-	MainPage,
-	NotFoundPage,
-	AuthPage,
-	TwelveSteps,
-	Lesson,
-	PageBot,
-	PageBase,
-	PagePracties,
-	PageSergay,
-	CatalogTraining,
-	CatalogTrainingSingle,
-	Energy365,
+  MainPage,
+  NotFoundPage,
+  AuthPage,
+  TwelveSteps,
+  Lesson,
+  PageBot,
+  PageBase,
+  PagePracties,
+  PageSergay,
+  CatalogTraining,
+  CatalogTrainingSingle,
+  Energy365,
   Energy365Single,
   twelveMeet,
-}
+  Referal,
+};
