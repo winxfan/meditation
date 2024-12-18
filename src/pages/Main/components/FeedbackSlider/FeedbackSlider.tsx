@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import {FeedbackCard} from "@/pages/Main/components/FeedbackCard";
 import css from './FeedbackSlider.module.scss'
+import {data} from "@/pages/Main/components/FeedbackSlider/data";
 
 export const FeedbackSlider = () => {
 
@@ -12,18 +12,11 @@ export const FeedbackSlider = () => {
 				spaceBetween={6}
 				className={css.slider}
 			>
-				<SwiperSlide className={css.slide}>
-					<FeedbackCard/>
-				</SwiperSlide>
-				<SwiperSlide className={css.slide}>
-					<FeedbackCard/>
-				</SwiperSlide>
-				<SwiperSlide className={css.slide}>
-					<FeedbackCard/>
-				</SwiperSlide>
-				<SwiperSlide className={css.slide}>
-					<FeedbackCard/>
-				</SwiperSlide>
+				{data.map((item) => (
+					<SwiperSlide className={css.slide} key={item.id}>
+						<FeedbackCard description={item.description}/>
+					</SwiperSlide>
+				))}
 			</Swiper>
 		</div>
 	)
