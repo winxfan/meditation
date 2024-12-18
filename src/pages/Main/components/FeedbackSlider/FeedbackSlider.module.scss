@@ -1,9 +1,7 @@
 .slider {
-  margin: 0 -14px;
+  margin: 0 -10px;
 
-  :global(.swiper-slide:first-child) {
-    margin-left: 14px
-  }
+  padding: 0 10px;
 }
 
 .slide {

@@ -28,22 +28,22 @@ const router = createBrowserRouter([
       },
       {
         path: "/bot",
-				element: <pages.PageBot/>,
-			},
-			{
-				path: "/base",
-				element: <pages.PageBase/>,
-			},
-			{
-				path: "/practices",
-				element: <pages.PagePracties/>,
-			},
-			{
-				path: "/sergey",
-				element: <pages.PageSergay/>,
-			},
-			{
-				path: "auth/:token?",
+        element: <pages.PageBot />,
+      },
+      {
+        path: "/base",
+        element: <pages.PageBase />,
+      },
+      {
+        path: "/practices",
+        element: <pages.PagePracties />,
+      },
+      {
+        path: "/sergey",
+        element: <pages.PageSergay />,
+      },
+      {
+        path: "auth/:token?",
         element: <pages.AuthPage />,
       },
       {
@@ -69,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: "/twelvemeet",
         element: <pages.twelveMeet />,
+      },
+      {
+        path: "/referal",
+        element: <pages.Referal />,
       },
       {
         path: "*",
