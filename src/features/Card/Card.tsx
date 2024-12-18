@@ -1,21 +1,22 @@
-import css from './Card.module.scss';
-import cs from "classnames";
-import {Button} from "@/components/Button";
+import css from './Card.module.scss'
+import cs from 'classnames'
+import { Button } from '@/components/Button'
 
 export interface CardProps {
-	title?: string;
-	description?: string;
-	descriptionLight?: boolean;
-	topText?: string;
-	variant?: 'light' | 'black' | 'transparent';
-	pictureUrl?: string;
-	buttonOnClick?: () => void;
-	buttonTitle?: string;
-	align?: 'left' | 'right';
-	size?: 'large' | 'small';
-	titleWidth?: string;
-	descriptionWidth?: string;
-	className?: string;
+	title?: string
+	description?: string
+	descriptionLight?: boolean
+	topText?: string
+	variant?: 'light' | 'black' | 'transparent'
+	pictureUrl?: string
+	buttonOnClick?: () => void
+	buttonTitle?: string
+	align?: 'left' | 'right'
+	size?: 'large' | 'small'
+	titleWidth?: string
+	descriptionWidth?: string
+	contentWidth?: string
+	className?: string
 	buttonClassName?: string
 }
 
@@ -35,27 +36,30 @@ export const Card = (props: CardProps) => {
 		className,
 		descriptionLight,
 		buttonClassName,
-	} = props;
+		contentWidth = '100%',
+	} = props
 
 	return (
 		<div
 			className={cs(css.container, variant, align, size, className)}
 			style={{
-				backgroundImage: `url(${pictureUrl})`
+				backgroundImage: `url(${pictureUrl})`,
 			}}
 		>
 			<div
 				className={css.content}
+				style={{
+					maxWidth: contentWidth,
+				}}
 			>
-				{topText && (
-					<p className={css.topText}>{topText}</p>
-				)}
+				{topText && <p className={css.topText}>{topText}</p>}
 
 				{title && (
-					<p className={css.title}
-					   style={{
-						   maxWidth: titleWidth
-					   }}
+					<p
+						className={css.title}
+						style={{
+							maxWidth: titleWidth,
+						}}
 					>
 						{title}
 					</p>
@@ -63,9 +67,12 @@ export const Card = (props: CardProps) => {
 
 				{description && (
 					<p
-						className={cs(css.description, descriptionLight && css.descriptionLight)}
+						className={cs(
+							css.description,
+							descriptionLight && css.descriptionLight
+						)}
 						style={{
-							maxWidth: descriptionWidth
+							maxWidth: descriptionWidth,
 						}}
 					>
 						{description}
@@ -75,7 +82,7 @@ export const Card = (props: CardProps) => {
 				{buttonTitle && (
 					<Button
 						variant={variant === 'white' ? 'white' : 'violet'}
-						size="small"
+						size='small'
 						className={cs(css.button, buttonClassName)}
 						onClick={buttonOnClick}
 					>
