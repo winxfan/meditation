@@ -1,1 +1,1 @@
-export { community as default } from "./Community";
+export { Сommunity as default } from "./Community";

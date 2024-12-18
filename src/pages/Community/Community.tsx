@@ -14,7 +14,7 @@ import razbor_4 from "@/assets/image/community4.png";
 import communityScreen from "@/assets/image/CommunityScreen.png";
 import {Button} from "antd";
 
-export const community = () => {
+export const Сommunity = () => {
   useBackButton();
 
   return (

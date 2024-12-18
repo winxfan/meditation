@@ -20,10 +20,10 @@ const PageBase = () => {
 
             <div className={cl.what_is_base}>
                 <Paragraph className={cl.what_is_base__small}>Что включает база</Paragraph>
-                <Title level={2} className={cl.what_is_base__subtitle}>
+                <h1 className={cl.what_is_base__subtitle}>
                     70 проверенных практик длительностью от 1 до 1,5 часов, которые подходят для
                     любых запросов
-                </Title>
+                </h1>
                 <Paragraph className={cl.what_is_base__text}>
                     8 тематических разделов: каждая практика направлена на решение определённой
                     задачи и раскрытие вашего потенциала
