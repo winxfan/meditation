@@ -26,17 +26,17 @@ export const AudioPlayer = ({src, title}: AudioPlayerProps) => {
 				height: 60,
 			});
 
-			wavesurferRef.current.load(src);
+			wavesurferRef.current?.load(src);
 
 			// Показываем состояние загрузки
 			setIsLoading(true);
 
 			// Обработчик события загрузки аудиофайла
-			wavesurferRef.current.on('ready', () => {
+			wavesurferRef.current?.on('ready', () => {
 				setIsLoading(false); // Аудио загружено
 			});
 
-			wavesurferRef.current.on('error', () => {
+			wavesurferRef.current?.on('error', () => {
 				console.log('err')
 			});
 		} catch (err) {
@@ -47,7 +47,7 @@ export const AudioPlayer = ({src, title}: AudioPlayerProps) => {
 	}, []);
 
 	const togglePlayPause = () => {
-		wavesurferRef.current.playPause();
+		wavesurferRef.current?.playPause();
 		setIsPlaying(!isPlaying);
 	};
 
