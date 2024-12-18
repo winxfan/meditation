@@ -20,7 +20,7 @@ export const FeedbackCard = (props: FeedbackCardProps) => {
 			</div>
 
 			<div className={css.body}>
-				<p className={css.title}>
+				<p className={css.text}>
 					{formattedDescription}
 				</p>
 			</div>
