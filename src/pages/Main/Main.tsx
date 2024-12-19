@@ -97,7 +97,7 @@ export const Main = () => {
           title="База из 70 практик"
           description="Быстрый результат
 и мощные изменения"
-
+          titleWidth="250px"
           variant="black"
         />
 
