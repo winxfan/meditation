@@ -3,8 +3,11 @@ import css from "./Referal.module.scss";
 import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 
 import roundBg from "@/assets/image/round-bg.jpg";
+import {useBackButton} from "@/utils/hooks/useBackButton";
 
 export const Referal = () => {
+  useBackButton();
+
   return (
     <div>
       <Header />
