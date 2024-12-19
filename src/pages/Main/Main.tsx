@@ -136,7 +136,7 @@ export const Main = () => {
           variant="black"
           // buttonTitle="Начать зарабатывать"
           onCardClick={() => navigate('referal')}
-          title="Получай&nbsp;пассивный&nbsp;доход от 24 000 руб. в месяц"
+          title="Получай&nbsp;пассивный&nbsp;доход от&nbsp;24&nbsp;000&nbsp;руб.&nbsp;в&nbsp;месяц"
           description="Присоединяйтесь к системе, где вы не только растёте через практики, но и получаете ежемесячный пассивный доход, делясь ценностями клуба с другими"
           titleWidth="100%"
         />
