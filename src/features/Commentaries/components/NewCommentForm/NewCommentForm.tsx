@@ -74,7 +74,7 @@ export const NewCommentForm = ({lessonId}: {lessonId: number}) => {
 
 			<TextArea
 				placeholder="Введите Ваш комментарий здесь..."
-				autoSize={{ minRows: 10 }}
+				autoSize={{ minRows: 3 }}
 				className={css.textArea}
 				value={commentText}
 				onChange={(e) => onChangeValue(e.target.value)}
