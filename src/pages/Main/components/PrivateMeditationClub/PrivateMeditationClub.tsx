@@ -31,6 +31,7 @@ export const PrivateMeditationClub = () => {
 				slidesPerView="auto"
 				spaceBetween={6}
 				className={css.slider}
+				speed={600} // Set transition speed in milliseconds
 			>
 				{stepData.map((item, index) => (
 					<SwiperSlide className={css.slide} key={index}>
