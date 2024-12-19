@@ -1,22 +1,12 @@
-.audioPlayer {
+.audioPlayerContainer {
   width: 100%;
-  //background: linear-gradient(281.27deg, #007BFE 2%, #3B69FF 83.89%);
-  //border-radius: 20px;
-  //padding: 10px 14px 12px;
-
-  audio {
-    width: 100%;
-  }
+  background: linear-gradient(281.27deg, #007BFE 2%, #3B69FF 83.89%);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
 }
 
-.playButton {
-  background: transparent;
-  outline: none;
-  border: none;
-  padding: 0;
-}
-
-.practice {
+.audioTitle {
   font-size: 12px;
   font-weight: 500;
   line-height: 14.28px;
@@ -24,7 +14,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.title {
+.audioSubtitle {
   font-size: 16px;
   font-weight: 700;
   line-height: 19.04px;
@@ -34,34 +24,52 @@
   margin-top: 2px;
 }
 
-.container {
+:global(.rhap_main) {
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 10px;
-  margin-top: 9px;
 }
 
-.spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #4f80ff;
+:global(.rhap_container) {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+:global(.rhap_controls-section) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  grid-column-start: 1;
+  grid-row: 1;
+}
+
+:global(.rhap_play-pause-button) {
+  background-color: white;
+  color: #4a90e2;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
+  height: 60px;
+  width: 60px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+:global(.rhap_progress-indicator) {
+  background-color: white;
 }
 
-.loadingContainer {
-  display: grid;
-  grid-template-columns: 45px 1fr;
-  gap: 10px;
-  color: rgba(255, 255, 255, 1);
+:global(.rhap_progress-filled) {
+  background-color: white;
+}
+
+:global(.rhap_progress-section) {
+  grid-column-start: 2;
+}
+
+:global(.rhap_time) {
+  color: white;
 }

@@ -13,7 +13,7 @@ export const BeginningOfChange = () => {
 		<div className={css.container}>
 			<div className={css.header}>
 				<p className={css.title}>Начало Перемен</p>
-				<p className={css.description}>Бесплатный 4-х дневный курс</p>
+				{/*<p className={css.description}>Бесплатный 4-х дневный курс</p>*/}
 			</div>
 
 			<p className={css.bottomText}>
