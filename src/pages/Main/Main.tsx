@@ -29,8 +29,6 @@ export const Main = () => {
       <Header />
 
       <div className={css.container}>
-        {/*<FeedbackSlider />*/}
-        {/*<Hr />*/}
         <BeginningOfChange />
         <PrivateMeditationClub />
         <LevelsSlider />
@@ -47,13 +45,13 @@ export const Main = () => {
             pictureUrl={banner2}
             size="small"
             className={css.bannerSmall}
-            buttonTitle="Вступить"
+            // buttonTitle="Вступить"
             onCardClick={() => navigate('/community')}
           />
 
           <Card
             pictureUrl={banner3}
-            buttonTitle="Подключить"
+            // buttonTitle="Подключить"
             size="small"
             className={css.bannerSmall}
             onCardClick={() => navigate('/bot')}
@@ -64,7 +62,7 @@ export const Main = () => {
           pictureUrl={banner4}
           size="large"
           className={css.banner}
-          buttonTitle="Перейти к практикам"
+          // buttonTitle="Перейти к практикам"
           // onCardClick={() => navigate('/practices')}
         />
 
@@ -72,7 +70,7 @@ export const Main = () => {
           pictureUrl={banner5}
           size="large"
           className={css.banner}
-          buttonTitle="Перейти к практикам"
+          // buttonTitle="Перейти к практикам"
           onCardClick={() => navigate('/base')}
         />
 
@@ -80,7 +78,7 @@ export const Main = () => {
           pictureUrl={banner6}
           size="large"
           className={css.banner}
-          buttonTitle="Начать тренировки"
+          // buttonTitle="Начать тренировки"
           // onCardClick={() => navigate('catalogtraining')}
         />
 
@@ -89,7 +87,7 @@ export const Main = () => {
           size="large"
           className={css.banner2}
           align="right"
-          buttonTitle="Получить разбор"
+          // buttonTitle="Получить разбор"
           buttonClassName={css.absoluteBtn}
           variant="black"
           onCardClick={() => navigate('/sergey')}
@@ -100,7 +98,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           variant="black"
-          buttonTitle="Начать зарабатывать"
+          // buttonTitle="Начать зарабатывать"
           onCardClick={() => navigate('referal')}
         />
 
