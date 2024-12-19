@@ -2,13 +2,20 @@ import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
 import { initialState } from './data'
 import { LoadingStatus } from "@/constants";
 import {HttpResponse, ILesson, TestScoringPointsData} from "@/utils/types";
-import {fetchLesson, fetchTestScorePoints, TestScorePointsProps} from "@/utils/api/lesson";
+import {
+  fetchCreateComment,
+  fetchGetComments,
+  fetchLesson,
+} from "@/utils/api/lesson";
+import {ICommentProps} from "@/features/Commentaries/components/Comment";
 
 export type LessonState = {
   status: LoadingStatus,
-  testScoreStatus: LoadingStatus,
   data: Record<string, ILesson>;
-  testScoreData: Record<string, TestScoringPointsData>,
+  createCommentStatus: LoadingStatus,
+  createCommentData: ICommentProps | null,
+  getCommentsStatus: LoadingStatus,
+  getCommentsData: ICommentProps[],
 }
 
 export const getLesson = createAsyncThunk<HttpResponse<ILesson>, {id: string}>('lesson/get',async ({id}) => {
@@ -16,37 +23,21 @@ export const getLesson = createAsyncThunk<HttpResponse<ILesson>, {id: string}>('
   return data;
 });
 
-export const getTestScorePoints = createAsyncThunk<HttpResponse<TestScoringPointsData>, TestScorePointsProps>('test/scorePoints',async (props) => {
-  const {data} = await fetchTestScorePoints(props);
+export const getComments = createAsyncThunk<HttpResponse<ICommentProps[]>, {lessonId: number}>('comments/get',async ({lessonId}) => {
+  const {data} = await fetchGetComments({lessonId})
+  return data;
+});
+
+export const createComment = createAsyncThunk<HttpResponse<ICommentProps[]>, ICommentProps & {lessonId: number}>('comment/create',async (props) => {
+  const {data} = await fetchCreateComment(props)
   return data;
 });
 
 const lessonSlice = createSlice({
   name: 'lesson',
   initialState,
-  reducers: {
-    resetTestScore: (state, action: PayloadAction<{id: string}>) => {
-      const {id} = action.payload;
-      console.log({id})
-      state.testScoreStatus = LoadingStatus.none;
-      state.testScoreData[id] = undefined;
-    }
-  },
+  reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getTestScorePoints.pending, (state) => {
-      state.testScoreStatus = LoadingStatus.pending;
-    }),
-    builder.addCase(getTestScorePoints.rejected, (state) => {
-      state.testScoreStatus = LoadingStatus.error;
-    }),
-    builder.addCase(getTestScorePoints.fulfilled, (state, action) => {
-      state.testScoreStatus = LoadingStatus.success;
-      const {id} = action.meta.arg;
-      const {data} = action.payload;
-
-      state.testScoreData[id] = data;
-    }),
-
     builder.addCase(getLesson.pending, (state) => {
       state.status = LoadingStatus.pending;
     }),
@@ -61,11 +52,31 @@ const lessonSlice = createSlice({
         state.data[_id] = action.payload.data;
       }
     })
+
+    builder.addCase(createComment.pending, (state) => {
+      state.createCommentStatus = LoadingStatus.pending;
+    }),
+    builder.addCase(createComment.rejected, (state) => {
+      state.createCommentStatus = LoadingStatus.error;
+    }),
+    builder.addCase(createComment.fulfilled, (state, action) => {
+      state.createCommentStatus = LoadingStatus.success;
+      state.createCommentData = action.payload.data as any;
+    }),
+
+    builder.addCase(getComments.pending, (state) => {
+      state.getCommentsStatus = LoadingStatus.pending;
+    }),
+    builder.addCase(getComments.rejected, (state) => {
+      state.getCommentsStatus = LoadingStatus.error;
+    }),
+    builder.addCase(getComments.fulfilled, (state, action) => {
+      state.getCommentsStatus = LoadingStatus.success;
+      state.getCommentsData = action.payload.data;
+    })
   },
 })
 
-export const {
-  resetTestScore
-} = lessonSlice.actions
+export const {} = lessonSlice.actions
 
 export default lessonSlice.reducer

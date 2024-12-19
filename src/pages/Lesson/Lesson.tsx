@@ -7,6 +7,7 @@ import {lessonData} from "@/pages/Lesson/data";
 import HomeworkIcon from '@/assets/image/homework.svg'
 import {AudioPlayer} from "@/components/AudioPlayer/AudioPlayer";
 import {useBackButton} from "@/utils/hooks/useBackButton";
+import {Commentaries} from "@/features/Commentaries";
 
 export const Lesson = () => {
   const { id = 1} = useParams();
@@ -20,13 +21,13 @@ export const Lesson = () => {
       <div className={css.container}>
         <img src={currentLesson?.pictureSrc} className={css.banner} />
 
-        {currentLesson.videoId && (
-          <div className={css.video}>
-            <RuTubeVideo
-              videoId={currentLesson.videoId}
-            />
-          </div>
-        )}
+        {/*{currentLesson.videoId && (*/}
+        {/*  <div className={css.video}>*/}
+        {/*    <RuTubeVideo*/}
+        {/*      videoId={currentLesson.videoId}*/}
+        {/*    />*/}
+        {/*  </div>*/}
+        {/*)}*/}
 
         {currentLesson.audioLink && (
           <AudioPlayer src={currentLesson.audioLink} title={currentLesson.audioTitle}/>
@@ -40,11 +41,15 @@ export const Lesson = () => {
             </b>
           </div>
 
-          <p className={css.homeworkDescription}>{currentLesson?.homeworkDescription}</p>
+          <p className={css.homeworkDescription}>
+            {currentLesson?.homeworkDescription}
+          </p>
         </div>
 
         <FixedSubscribeBtn/>
       </div>
+
+      <Commentaries lessonId={currentLesson.id} />
     </div>
   );
 };

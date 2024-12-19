@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import WaveSurfer from "wavesurfer.js";
+// import WaveSurfer from "wavesurfer.js";
 import css from './AudioPlayer.module.scss';
 import PlayIcon from '@/assets/image/audioPlay.svg';
 import PauseIcon from '@/assets/image/audioPause.svg';
@@ -10,21 +10,21 @@ interface AudioPlayerProps {
 }
 
 
-const loadAudioWithAbort = (waveSurfer: any, src: any) => {
-	const controller = new AbortController();
-	const { signal } = controller;
-
-	// Загрузка с использованием fetch
-	waveSurfer.load(src, undefined, undefined, { signal });
-
-	return controller;
-}
+// const loadAudioWithAbort = (waveSurfer: any, src: any) => {
+// 	const controller = new AbortController();
+// 	const { signal } = controller;
+//
+// 	// Загрузка с использованием fetch
+// 	waveSurfer.load(src, undefined, undefined, { signal });
+//
+// 	return controller;
+// }
 
 export const AudioPlayer = ({ src, title }: AudioPlayerProps) => {
-	const [isPlaying, setIsPlaying] = useState(false);
-	const wavesurferRef = useRef(null);
-	const containerRef = useRef(null);
-	const [isLoading, setIsLoading] = useState(true);
+	// const [isPlaying, setIsPlaying] = useState(false);
+	// const wavesurferRef = useRef(null);
+	// const containerRef = useRef(null);
+	// const [isLoading, setIsLoading] = useState(true);
 
 	// useEffect(() => {
 	// 	let isMounted = true; // Флаг для проверки, что компонент всё ещё смонтирован

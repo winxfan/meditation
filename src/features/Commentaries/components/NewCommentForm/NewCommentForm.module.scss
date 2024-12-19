@@ -1,0 +1,56 @@
+.container {
+  background: linear-gradient(229.2deg, #623477 -26.12%, #2D2D4F 98.74%);
+  padding: 18px 21px 29px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 19.04px;
+  letter-spacing: -0.022em;
+  color: rgba(243, 244, 244, 1);
+}
+
+.textArea {
+  background-color: rgba(59, 32, 74, 1);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.011em;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  margin-top: 16px;
+  padding: 10px 14px;
+
+  &::placeholder {
+    color: white;
+    opacity: 0.5;
+  }
+
+  &:hover, &:focus {
+    background-color: rgba(59, 32, 74, 1);
+    color: white;
+  }
+}
+
+.submitBtn {
+  background-color: rgba(60, 152, 52, 1);
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.011em;
+  border-radius: 8px;
+  margin-top: 19px;
+  color: white;
+}
+
+.warning {
+  font-size: 14px;
+  color: black;
+}
