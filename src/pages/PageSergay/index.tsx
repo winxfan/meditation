@@ -79,7 +79,7 @@ const PageSergay = () => {
                 </div>
             </div>
             <Button className={cl.btn_go_bot}>
-                Начать достигать цели вместе с&nbsp;ботом
+                Записаться на разбор
             </Button>
 
             <FixedSubscribeBtn className={cl.fixedbutton}/>

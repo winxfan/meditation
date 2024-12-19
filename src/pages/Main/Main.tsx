@@ -65,7 +65,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           buttonTitle="Перейти к практикам"
-          onCardClick={() => navigate('/practices')}
+          // onCardClick={() => navigate('/practices')}
         />
 
         <Card
@@ -81,7 +81,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           buttonTitle="Начать тренировки"
-          onCardClick={() => navigate('catalogtraining')}
+          // onCardClick={() => navigate('catalogtraining')}
         />
 
         <Card

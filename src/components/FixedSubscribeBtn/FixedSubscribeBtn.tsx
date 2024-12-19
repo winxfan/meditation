@@ -10,7 +10,9 @@ export const FixedSubscribeBtn = ({className}: {className?: string}) => {
 	return (
 		<div className={cs(css.fixedButtonContainer, className)}>
 			<Button variant="violet" size="large" className={css.subscribeBtn} onClick={onClick} fullWidth>
-				<p className={css.subscribeBtnTitle}>Открыть полный доступ</p>
+				<p className={css.subscribeBtnTitle}>
+					Вступить в Private Meditation Club
+				</p>
 				<span className={css.subscribeBtnPrice}>4 990₽/мес</span>
 			</Button>
 		</div>
