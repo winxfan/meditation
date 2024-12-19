@@ -51,6 +51,7 @@ export const PrivateMeditationClub = () => {
 							topText={item.topText}
 							title={item.title}
 							description={item.description}
+							pictureSrc=""
 							onButtonClick={() => navigate(`/twelveSteps/${index + 1}`)}
 						/>
 					</SwiperSlide>
