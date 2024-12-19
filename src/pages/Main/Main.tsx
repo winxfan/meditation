@@ -38,7 +38,7 @@ export const Main = () => {
           size="large"
           className={css.banner1}
           onCardClick={() => navigate('/energy365')}
-          title="Энергия и ресурс 365 дней в году"
+          title="Энергия&nbsp;и&nbsp;ресурс 365 дней в году"
           description="База ежeденевных
            практик для вашего роста
             и достижения целей "
@@ -80,7 +80,7 @@ export const Main = () => {
           className={css.banner}
           // buttonTitle="Перейти к практикам"
           // onCardClick={() => navigate('/practices')}
-          title="42 еженедельных практики"
+          title="42&nbsp;еженедельных практики"
           description="для вашей трансформации
            и роста"
 
@@ -136,8 +136,7 @@ export const Main = () => {
           variant="black"
           // buttonTitle="Начать зарабатывать"
           onCardClick={() => navigate('referal')}
-          title="Получай пассивный доход
-от 24 000 руб. в месяц"
+          title="Получай&nbsp;пассивный&nbsp;доход от 24 000 руб. в месяц"
           description="Присоединяйтесь к системе, где вы не только растёте через практики, но и получаете ежемесячный пассивный доход, делясь ценностями клуба с другими"
           titleWidth="300px"
         />
