@@ -3,8 +3,8 @@ import banner2 from '@/assets/image/Lesson2.png'
 import banner3 from '@/assets/image/Lesson3.png'
 import banner4 from '@/assets/image/Lesson4.png'
 import audio1 from './data/practice1.mp3'
-import audio2 from './data/practice1.mp3'
-import audio3 from './data/practice1.mp3'
+import audio2 from './data/practice2.mp3'
+import audio3 from './data/practice3.mp3'
 
 export const lessonData = [
 	{
