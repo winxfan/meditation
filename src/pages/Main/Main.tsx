@@ -138,7 +138,7 @@ export const Main = () => {
           onCardClick={() => navigate('referal')}
           title="Получай&nbsp;пассивный&nbsp;доход от 24 000 руб. в месяц"
           description="Присоединяйтесь к системе, где вы не только растёте через практики, но и получаете ежемесячный пассивный доход, делясь ценностями клуба с другими"
-          titleWidth="300px"
+          titleWidth="100%"
         />
 
         <div className={css.splitContainer}>
