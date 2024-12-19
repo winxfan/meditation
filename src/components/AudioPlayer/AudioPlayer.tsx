@@ -83,8 +83,9 @@ export const AudioPlayer = ({ src, title }: AudioPlayerProps) => {
 
 	return (
 		<figure className={css.audioPlayer}>
+			<b>Практика</b>
 			<figcaption>{title}</figcaption>
-			<audio controls src={src}></audio>
+			<audio controls src={src} style={{marginTop: '10px'}}></audio>
 		</figure>
 	)
 	//
