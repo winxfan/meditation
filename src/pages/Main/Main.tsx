@@ -38,6 +38,12 @@ export const Main = () => {
           size="large"
           className={css.banner1}
           onCardClick={() => navigate('/energy365')}
+          title="Энергия и ресурс
+           365 дней в году"
+          description="База ежeденевных
+           практик для вашего роста
+            и достижения целей "
+
         />
 
         <div className={css.splitContainer}>
@@ -47,6 +53,12 @@ export const Main = () => {
             className={css.bannerSmall}
             // buttonTitle="Вступить"
             onCardClick={() => navigate('/community')}
+            title="Сообщество"
+            description="Наше сообщество — это
+             сердце клуба. Это место,
+             где вы всегда найдете
+             поддержку, теплоту и
+             понимание. "
           />
 
           <Card
@@ -55,6 +67,11 @@ export const Main = () => {
             size="small"
             className={css.bannerSmall}
             onCardClick={() => navigate('/bot')}
+            title="Помощник"
+            description="Бот-помощник для роста
+            и трансформации: ваш
+            личный навигатор перемен"
+            variant="black"
           />
         </div>
 
@@ -64,6 +81,11 @@ export const Main = () => {
           className={css.banner}
           // buttonTitle="Перейти к практикам"
           // onCardClick={() => navigate('/practices')}
+          title="42 еженедельных
+          практики"
+          description="для вашей трансформации
+           и роста"
+
         />
 
         <Card
@@ -72,6 +94,11 @@ export const Main = () => {
           className={css.banner}
           // buttonTitle="Перейти к практикам"
           onCardClick={() => navigate('/base')}
+          title="База из 70 практик"
+          description="Быстрый результат
+и мощные изменения"
+
+          variant="black"
         />
 
         <Card
@@ -80,6 +107,13 @@ export const Main = () => {
           className={css.banner}
           // buttonTitle="Начать тренировки"
           // onCardClick={() => navigate('catalogtraining')}
+          title="Спорт с тренером
+           онлайн"
+          description="Эффективные тренировки
+           с профессиональным
+           наставником, которые
+           легко встроятся в ваш день"
+
         />
 
         <Card
@@ -91,6 +125,12 @@ export const Main = () => {
           buttonClassName={css.absoluteBtn}
           variant="black"
           onCardClick={() => navigate('/sergey')}
+          title="24 разбора
+          с диагностикой от Сергея"
+          description="Эти разборы — это ключ
+к вашему внутреннему
+освобождению и трансформации"
+
         />
 
         <Card
@@ -100,6 +140,10 @@ export const Main = () => {
           variant="black"
           // buttonTitle="Начать зарабатывать"
           onCardClick={() => navigate('referal')}
+          title="Получай пассивный доход
+от 24 000 руб. в месяц"
+          description="Присоединяйтесь к системе, где вы не только растёте через практики, но и получаете ежемесячный пассивный доход, делясь ценностями клуба с другими"
+          titleWidth="300px"
         />
 
         <div className={css.splitContainer}>

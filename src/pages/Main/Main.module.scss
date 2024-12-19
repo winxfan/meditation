@@ -10,6 +10,10 @@
   aspect-ratio: 340 / 177;
   height: auto !important;
   background-size: contain;
+
+  p {
+    opacity: 0.75;
+  }
 }
 
 .banner2 {
@@ -17,6 +21,10 @@
   margin: 10px 0;
   height: auto !important;
   background-size: contain;
+
+  p {
+    opacity: 0.75;
+  }
 }
 
 .banner1 {
@@ -24,12 +32,20 @@
   height: auto !important;
   background-size: contain;
   margin: 10px 0;
+
+  p {
+    opacity: 0.75;
+  }
 }
 
 .bannerSmall {
   aspect-ratio: 165 / 177;
   height: auto !important;
   background-size: contain;
+
+  p {
+    opacity: 0.75;
+  }
 }
 
 .splitContainer {

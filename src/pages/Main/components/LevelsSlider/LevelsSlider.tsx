@@ -76,11 +76,11 @@ export const LevelsSlider = () => {
 			</Swiper>
 
 
-			<div className={css.footer}>
-				<Button variant="white" size="medium">
-					Подробнее об уровнях
-				</Button>
-			</div>
+			{/*<div className={css.footer}>*/}
+			{/*	<Button variant="white" size="medium">*/}
+			{/*		Подробнее об уровнях*/}
+			{/*	</Button>*/}
+			{/*</div>*/}
 		</div>
 	);
 }

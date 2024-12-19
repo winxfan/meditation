@@ -29,8 +29,12 @@ export const BeginningOfChange = () => {
 					// buttonTitle="Смотреть"
 					className={css.card}
 					topText="ЧАСТЬ 1"
-					description="Цена перемен: как
-я потерял 50 миллионов и нашёл путь к новой реальности"
+					size='large'
+					description="Цена перемен:
+					 как я потерял 50
+					 миллионов и
+					 нашёл путь к
+					 новой реальности"
 				/>
 
 				<BeginningOfChangeCard
@@ -41,7 +45,9 @@ export const BeginningOfChange = () => {
 					onCardClick={() => navigate(`/lesson/2`)}
 					className={css.card}
 					topText="ЧАСТЬ 2"
-					description="Внутренние барьеры: что удерживает вас
+					size='large'
+					description="Внутренние барьеры:
+					 что удерживает вас
 от новой жизни "
 				/>
 
@@ -53,9 +59,11 @@ export const BeginningOfChange = () => {
 					onCardClick={() => navigate(`/lesson/3`)}
 					className={css.card}
 					topText="ЧАСТЬ 3"
+					size='large'
 					description="Освобождение
 от прошлого:
-как перестать тянуть боль
+как перестать
+тянуть боль
 за собой"
 				/>
 
@@ -68,9 +76,11 @@ export const BeginningOfChange = () => {
 					className={css.card}
 					topText="ЧАСТЬ 4"
 					variant="black"
+					size='large'
 					description="
 					12 шагов
-к кардинальным переменам
+к кардинальным
+переменам
 в жизни"
 				/>
 			</div>

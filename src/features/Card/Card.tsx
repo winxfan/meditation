@@ -31,8 +31,8 @@ export const Card = (props: CardProps) => {
 		buttonTitle,
 		align,
 		size = 'small',
-		titleWidth = '100%',
-		descriptionWidth = '100%',
+		titleWidth,
+		descriptionWidth ,
 		className,
 		descriptionLight,
 		buttonClassName,
@@ -51,25 +51,23 @@ export const Card = (props: CardProps) => {
 				className={css.content}
 			>
 				{topText && (
-					<p className={css.topText}>{topText}</p>
+					<p className={css.topText}>
+						{topText}
+					</p>
 				)}
 
 				{title && (
-					<p className={css.title}
+					<b className={css.title}
 					   style={{
 						   maxWidth: titleWidth
-					   }}
-					>
+					   }}>
 						{title}
-					</p>
+					</b>
 				)}
 
 				{description && (
 					<p
 						className={cs(css.description, descriptionLight && css.descriptionLight)}
-						style={{
-							maxWidth: descriptionWidth
-						}}
 					>
 						{description}
 					</p>
