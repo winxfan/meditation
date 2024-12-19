@@ -1,4 +1,6 @@
 import css from './Comment.module.scss';
+import { format } from 'date-fns';
+import { ru } from 'date-fns/locale';
 
 export interface ICommentProps {
 	id: string;
@@ -9,6 +11,7 @@ export interface ICommentProps {
 
 export const Comment = (props: ICommentProps) => {
 	const {name, text, date} = props;
+	const formattedDate = format(new Date(date), 'dd MMM HH:mm', { locale: ru });
 
 	return (
 		<div className={css.comment}>
@@ -18,7 +21,7 @@ export const Comment = (props: ICommentProps) => {
 				</p>
 
 				<p className={css.commentDate}>
-					{date}
+					{formattedDate}
 				</p>
 			</div>
 

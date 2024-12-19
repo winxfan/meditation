@@ -18,4 +18,7 @@
 
 .comments {
   margin-top: 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }

@@ -54,3 +54,34 @@
   font-size: 14px;
   color: black;
 }
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalIcon {
+
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: -0.022em;
+  color: rgba(33, 40, 49, 1);
+  display: block;
+  margin-top: 10px;
+}
+
+.modalDescription {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.4399999976158142px;
+  color: black;
+  display: block;
+  margin-top: 5px;
+}
