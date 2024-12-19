@@ -30,7 +30,7 @@ export const Main = () => {
 
       <div className={css.container}>
         {/*<FeedbackSlider />*/}
-        <Hr />
+        {/*<Hr />*/}
         <BeginningOfChange />
         <PrivateMeditationClub />
         <LevelsSlider />
@@ -101,6 +101,7 @@ export const Main = () => {
           className={css.banner}
           variant="black"
           buttonTitle="Начать зарабатывать"
+          onCardClick={() => navigate('referal')}
         />
 
         <div className={css.splitContainer}>

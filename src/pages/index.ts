@@ -23,7 +23,6 @@ const Energy365Single = lazy(() => import("./Energy365Single"));
 
 const twelveMeet = lazy(() => import("./twelveMeet"));
 const Community = lazy(() => import("./Community"));
-
 const Referal = lazy(() => import("./Referal"));
 
 export {

@@ -65,7 +65,7 @@ export const LevelsSlider = () => {
 				onSwiper={handleSwiperInit}
 				spaceBetween={15}
 				autoplay={{
-					delay: 1000, // Задержка в миллисекундах (1 секунда)
+					delay: 3000, // Задержка в миллисекундах (1 секунда)
 				}}
 			>
 				{levelsData.map((item) => (

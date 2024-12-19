@@ -12,9 +12,13 @@ export const BeginningOfChange = () => {
 	return (
 		<div className={css.container}>
 			<div className={css.header}>
-				<p className={css.title}>Начало перемен</p>
+				<p className={css.title}>Начало Перемен</p>
 				<p className={css.description}>Бесплатный 4-х дневный курс</p>
 			</div>
+
+			<p className={css.bottomText}>
+				Трансформационный сериал из 4-х частей
+			</p>
 
 			<div className={css.body}>
 				<BeginningOfChangeCard
@@ -22,7 +26,7 @@ export const BeginningOfChange = () => {
 					pictureUrl={lesson1}
 					whenOpen=''
 					onCardClick={() => navigate(`/lesson/1`)}
-					buttonTitle="Смотреть"
+					// buttonTitle="Смотреть"
 					className={css.card}
 					topText="ЧАСТЬ 1"
 					description="Цена перемен: как
@@ -33,7 +37,7 @@ export const BeginningOfChange = () => {
 					isOpen={true}
 					pictureUrl={lesson2}
 					whenOpen=''
-					buttonTitle="Смотреть"
+					// buttonTitle="Смотреть"
 					onCardClick={() => navigate(`/lesson/2`)}
 					className={css.card}
 					topText="ЧАСТЬ 2"
@@ -45,7 +49,7 @@ export const BeginningOfChange = () => {
 					isOpen={true}
 					pictureUrl={lesson3}
 					whenOpen=''
-					buttonTitle="Смотреть"
+					// buttonTitle="Смотреть"
 					onCardClick={() => navigate(`/lesson/3`)}
 					className={css.card}
 					topText="ЧАСТЬ 3"
@@ -59,7 +63,7 @@ export const BeginningOfChange = () => {
 					isOpen={true}
 					pictureUrl={lesson4}
 					whenOpen=''
-					buttonTitle="Смотреть"
+					// buttonTitle="Смотреть"
 					onCardClick={() => navigate(`/lesson/4`)}
 					className={css.card}
 					topText="ЧАСТЬ 4"
