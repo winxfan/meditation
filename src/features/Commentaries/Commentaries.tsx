@@ -16,9 +16,6 @@ export const Commentaries = ({lessonId}: CommentariesProps) => {
 	const commentsData = useAppSelector((store) => store.lesson.getCommentsData);
 	const commentsStatus = useAppSelector((store) => store.lesson.getCommentsStatus);
 
-	const createCommentData = useAppSelector((store) => store.lesson.createCommentData);
-	const createCommentStatus = useAppSelector((store) => store.lesson.createCommentStatus);
-
 	useEffect(() => {
 		// @ts-ignore
 		dispatch(getComments({lessonId}))

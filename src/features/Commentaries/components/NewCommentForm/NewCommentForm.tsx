@@ -1,9 +1,11 @@
 import css from './NewCommentForm.module.scss';
 import { Input } from 'antd';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useTelegram} from "@/utils/hooks/useTelegram";
 import {useDispatch} from "react-redux";
 import {createComment} from "@/store/lesson/lessonSlice";
+import {useAppSelector} from "@/utils/hooks/redux";
+import {LoadingStatus} from "@/constants";
 
 const { TextArea } = Input;
 
@@ -11,6 +13,8 @@ export const NewCommentForm = ({lessonId}: {lessonId: number}) => {
 	const [commentText, setCommentText] = useState('');
 	const { initDataUnsafe, WebAppUser } = useTelegram();
 	const dispatch = useDispatch();
+	const createCommentData = useAppSelector((store) => store.lesson.createCommentData);
+	const createCommentStatus = useAppSelector((store) => store.lesson.createCommentStatus);
 
 	const firstName = initDataUnsafe?.user?.first_name || 'Anon';
 	const userName = initDataUnsafe?.user?.username || 'anon';
@@ -29,6 +33,12 @@ export const NewCommentForm = ({lessonId}: {lessonId: number}) => {
 			text: commentText,
 		}))
 	}
+
+	useEffect(() => {
+		if (createCommentStatus === LoadingStatus.none) {
+			setCommentText('')
+		}
+	}, [createCommentStatus])
 
 	if (!lessonId || !userName) {
 		return (
