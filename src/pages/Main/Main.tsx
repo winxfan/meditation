@@ -29,7 +29,7 @@ export const Main = () => {
       <Header />
 
       <div className={css.container}>
-        <FeedbackSlider />
+        {/*<FeedbackSlider />*/}
         <Hr />
         <BeginningOfChange />
         <PrivateMeditationClub />
