@@ -1,10 +1,13 @@
 .container {
   width: 248px;
-  aspect-ratio: 240 / 248;
+  aspect-ratio: 240 / 280;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative;
   padding: 12px 9px 15px;
+  background-color: white;
+  border-radius: 15px;
+  background-position: right bottom;
 }
 
 .topText {
