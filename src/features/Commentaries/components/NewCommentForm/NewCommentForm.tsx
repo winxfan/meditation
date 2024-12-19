@@ -3,7 +3,7 @@ import {Input, Modal} from 'antd';
 import React, {useEffect, useState} from "react";
 import {useTelegram} from "@/utils/hooks/useTelegram";
 import {useDispatch} from "react-redux";
-import {createComment} from "@/store/lesson/lessonSlice";
+import {createComment, resetCreateCommentStatus} from "@/store/lesson/lessonSlice";
 import {useAppSelector} from "@/utils/hooks/redux";
 import {LoadingStatus} from "@/constants";
 import OkIcon from '@/assets/icons/ok.svg'
@@ -55,8 +55,15 @@ export const NewCommentForm = ({lessonId}: {lessonId: number}) => {
 		)
 	}
 
+	useEffect(() => {
+		return () => {
+			dispatch(resetCreateCommentStatus())
+		}
+	}, []);
+
 	const handleCancel = () => {
 		setIsModalOpen(false);
+		dispatch(resetCreateCommentStatus())
 	}
 
 	return (

@@ -36,7 +36,11 @@ export const createComment = createAsyncThunk<HttpResponse<ICommentProps[]>, ICo
 const lessonSlice = createSlice({
   name: 'lesson',
   initialState,
-  reducers: {},
+  reducers: {
+    resetCreateCommentStatus: (state) => {
+      state.createCommentStatus = LoadingStatus.none;
+    }
+  },
   extraReducers: (builder) => {
     builder.addCase(getLesson.pending, (state) => {
       state.status = LoadingStatus.pending;
@@ -77,6 +81,8 @@ const lessonSlice = createSlice({
   },
 })
 
-export const {} = lessonSlice.actions
+export const {
+  resetCreateCommentStatus,
+} = lessonSlice.actions
 
 export default lessonSlice.reducer
