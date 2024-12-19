@@ -38,8 +38,7 @@ export const Main = () => {
           size="large"
           className={css.banner1}
           onCardClick={() => navigate('/energy365')}
-          title="Энергия и ресурс
-           365 дней в году"
+          title="Энергия и ресурс 365 дней в году"
           description="База ежeденевных
            практик для вашего роста
             и достижения целей "
@@ -81,8 +80,7 @@ export const Main = () => {
           className={css.banner}
           // buttonTitle="Перейти к практикам"
           // onCardClick={() => navigate('/practices')}
-          title="42 еженедельных
-          практики"
+          title="42 еженедельных практики"
           description="для вашей трансформации
            и роста"
 
@@ -107,8 +105,7 @@ export const Main = () => {
           className={css.banner}
           // buttonTitle="Начать тренировки"
           // onCardClick={() => navigate('catalogtraining')}
-          title="Спорт с тренером
-           онлайн"
+          title="Спорт с тренером онлайн"
           description="Эффективные тренировки
            с профессиональным
            наставником, которые
@@ -125,8 +122,7 @@ export const Main = () => {
           buttonClassName={css.absoluteBtn}
           variant="black"
           onCardClick={() => navigate('/sergey')}
-          title="24 разбора
-          с диагностикой от Сергея"
+          title="24 разбора с диагностикой от Сергея"
           description="Эти разборы — это ключ
 к вашему внутреннему
 освобождению и трансформации"
