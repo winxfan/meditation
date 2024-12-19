@@ -80,7 +80,7 @@ export const Main = () => {
           className={css.banner}
           // buttonTitle="Перейти к практикам"
           // onCardClick={() => navigate('/practices')}
-          title="42&nbsp;еженедельных практики"
+          title="42&nbsp;живых&nbsp;еженедельных практики с Сергеем"
           description="для вашей трансформации
            и роста"
 
