@@ -21,7 +21,7 @@ export const BeginningOfChange = () => {
 					isOpen={true}
 					pictureUrl={lesson1}
 					whenOpen=''
-					buttonOnClick={() => navigate(`/lesson/1`)}
+					onCardClick={() => navigate(`/lesson/1`)}
 					buttonTitle="Смотреть"
 					className={css.card}
 					topText="ЧАСТЬ 1"
@@ -34,7 +34,7 @@ export const BeginningOfChange = () => {
 					pictureUrl={lesson2}
 					whenOpen=''
 					buttonTitle="Смотреть"
-					// buttonOnClick={}
+					onCardClick={() => navigate(`/lesson/2`)}
 					className={css.card}
 					topText="ЧАСТЬ 2"
 					description="Внутренние барьеры: что удерживает вас
@@ -46,7 +46,7 @@ export const BeginningOfChange = () => {
 					pictureUrl={lesson3}
 					whenOpen=''
 					buttonTitle="Смотреть"
-					// buttonOnClick={() => navigate(`/lesson/3`)}
+					onCardClick={() => navigate(`/lesson/3`)}
 					className={css.card}
 					topText="ЧАСТЬ 3"
 					description="Освобождение
@@ -60,7 +60,7 @@ export const BeginningOfChange = () => {
 					pictureUrl={lesson4}
 					whenOpen=''
 					buttonTitle="Смотреть"
-					// buttonOnClick={() => navigate(`/lesson/4`)}
+					onCardClick={() => navigate(`/lesson/4`)}
 					className={css.card}
 					topText="ЧАСТЬ 4"
 					variant="black"

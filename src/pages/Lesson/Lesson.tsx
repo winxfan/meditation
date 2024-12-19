@@ -21,13 +21,13 @@ export const Lesson = () => {
       <div className={css.container}>
         <img src={currentLesson?.pictureSrc} className={css.banner} />
 
-        {/*{currentLesson.videoId && (*/}
-        {/*  <div className={css.video}>*/}
-        {/*    <RuTubeVideo*/}
-        {/*      videoId={currentLesson.videoId}*/}
-        {/*    />*/}
-        {/*  </div>*/}
-        {/*)}*/}
+        {currentLesson.videoId && (
+          <div className={css.video}>
+            <RuTubeVideo
+              videoId={currentLesson.videoId}
+            />
+          </div>
+        )}
 
         {currentLesson.audioLink && (
           <AudioPlayer src={currentLesson.audioLink} title={currentLesson.audioTitle}/>
