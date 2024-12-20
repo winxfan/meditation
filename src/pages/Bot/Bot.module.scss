@@ -70,8 +70,45 @@
     width: 100%;
 }
 
+
+
 .banner {
-    width: 100%;
-    display: block;
     margin-bottom: 10px;
+    width: 100%;
+    background-color: #F4D62C;
+    height: 345px;
+    padding: 18px 16px;
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.bannerTitle {
+    display: block;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 24.99px;
+    letter-spacing: -0.022em;
+    width: 220px;
+}
+
+.bannerSubtitle {
+    font-size: 16px;
+    line-height: 15.6px;
+    display: block;
+    font-weight: 400;
+    color: rgba(33, 40, 49, 0.5);
+    margin-top: 10px;
+    width: 160px;
+    margin-left: 15px;
+
+    li {
+        margin-bottom: 5px;
+    }
+}
+
+
+.screen {
+    width: 100%;
 }
