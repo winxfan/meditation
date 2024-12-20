@@ -2,17 +2,14 @@ import React, {FC, ReactNode, useEffect} from 'react';
 import css from './AppLayout.module.scss'
 import cs from "classnames";
 import {useTelegram} from "../utils/hooks/useTelegram";
-import {userAuth} from "@/store/user/userSlice";
 import {useAppDispatch} from "@/store";
 import {useParams} from "react-router-dom";
 import {useAppSelector} from "@/utils/hooks/redux";
-import {LoadingStatus} from "@/constants";
 import {QuestionCircleFilled} from "@ant-design/icons";
 import {DEFAULT_COURSE_ID} from "@/store/user/data";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import SwipeBackComponent from "@/components/SwipeBack/SwipeBack";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
@@ -56,7 +53,6 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
   }, [userId, courseId, isAuthorized, userStatus])
 
   return (
-    <SwipeBackComponent>
       <div className={cs(css.layout, css[colorScheme])}>
           {(!courseId) && (
             <div className={css.hintContainer}>
@@ -83,6 +79,5 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
 
         <Footer/>
       </div>
-    </SwipeBackComponent>
   );
 };
