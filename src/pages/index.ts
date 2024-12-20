@@ -8,8 +8,8 @@ const AuthPage = lazy(() => import("./Auth"));
 const TwelveSteps = lazy(() => import("./TwelveSteps"));
 
 const Lesson = lazy(() => import("./Lesson"));
-const PageBot = lazy(() => import("./PageBot"));
-const PageBase = lazy(() => import("./PageBase"));
+const PageBot = lazy(() => import("./Bot"));
+const PageBase = lazy(() => import("./Base"));
 const PagePracties = lazy(() => import("./PagePracties"));
 const PageSergay = lazy(() => import("./PageSergay"));
 

@@ -1,0 +1,1 @@
+export { PageBase as default} from './Base';
