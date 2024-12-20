@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import css from './RutubeVideo.module.scss';
+import {LoadingStatus} from "@/constants";
+import OkIcon from "@/assets/icons/ok.svg";
+import ErrorIcon from "@/assets/icons/error.svg";
+import {Modal} from "antd";
 
 // Типы для свойств компонента
 interface RuTubeEmbedProps {
@@ -62,50 +66,26 @@ export const RuTubeVideo: React.FC<RuTubeEmbedProps> = ({
 				className={css.frame}
 			></iframe>
 
-			{/*{showPopup && (*/}
-			{/*	<div*/}
-			{/*		style={{*/}
-			{/*			position: "fixed",*/}
-			{/*			top: 0,*/}
-			{/*			left: 0,*/}
-			{/*			width: "100%",*/}
-			{/*			height: "100%",*/}
-			{/*			backgroundColor: "rgba(0, 0, 0, 0.5)",*/}
-			{/*			display: "flex",*/}
-			{/*			justifyContent: "center",*/}
-			{/*			alignItems: "center",*/}
-			{/*			zIndex: 1000,*/}
-			{/*		}}*/}
-			{/*	>*/}
-			{/*		<div*/}
-			{/*			style={{*/}
-			{/*				background: "#fff",*/}
-			{/*				padding: "20px",*/}
-			{/*				borderRadius: "8px",*/}
-			{/*				textAlign: "center",*/}
-			{/*				maxWidth: "400px",*/}
-			{/*				width: "90%",*/}
-			{/*			}}*/}
-			{/*		>*/}
-			{/*			<h2>Доступ заблокирован</h2>*/}
-			{/*			<p>Вы смотрели видео {blockTimeInSeconds} секунд.</p>*/}
-			{/*			<button*/}
-			{/*				onClick={closePopup}*/}
-			{/*				style={{*/}
-			{/*					marginTop: "10px",*/}
-			{/*					padding: "10px 20px",*/}
-			{/*					backgroundColor: "#007bff",*/}
-			{/*					color: "#fff",*/}
-			{/*					border: "none",*/}
-			{/*					borderRadius: "4px",*/}
-			{/*					cursor: "pointer",*/}
-			{/*				}}*/}
-			{/*			>*/}
-			{/*				Закрыть*/}
-			{/*			</button>*/}
-			{/*		</div>*/}
-			{/*	</div>*/}
-			{/*)}*/}
+			<Modal
+				open={showPopup}
+				onCancel={closePopup}
+				footer={null}
+			>
+					<div className={css.modalContent}>
+						<b className={css.modalTitle}>
+							Полный урок доступен <br/>
+							по подписке
+						</b>
+
+						<p className={css.modalDescription}>
+							Вы можете оформить ее прямо сейчас и проходить программу в свободном досупе
+						</p>
+
+						<p className={css.modalDescription}>
+							Комментарий успешно отправлен
+						</p>
+					</div>
+			</Modal>
 		</div>
 	);
 };
