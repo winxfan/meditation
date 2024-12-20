@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 
-import { Header } from "@/components/Header";
+
 import css from './CatalogTrainingSingle.module.scss';
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 
@@ -19,7 +19,7 @@ export const CatalogTrainingSingle = () => {
 
   return (
     <div>
-      <Header />
+      
 
       <div className={css.container}>
         

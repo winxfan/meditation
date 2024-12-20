@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+
 import css from "./Energy365Single.module.scss";
 import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 
@@ -10,7 +10,7 @@ export const Energy365Single = () => {
 
   return (
     <div>
-      <Header />
+      
 
       <div className={css.container}>
         <div className={css.info} style={{ backgroundImage: `url(${image})` }}>

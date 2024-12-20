@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+
 import css from "./Community.module.scss";
 import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 
@@ -19,7 +19,7 @@ export const Сommunity = () => {
 
   return (
     <div>
-      <Header />
+      
 
       <div className={css.container}>
         <div

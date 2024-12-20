@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+
 import css from "./Referal.module.scss";
 import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 
@@ -10,7 +10,7 @@ export const Referal = () => {
 
   return (
     <div>
-      <Header />
+      
 
       <div className={css.container}>
         <div

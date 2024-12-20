@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+
 import css from "./twelveMeet.module.scss";
 import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 
@@ -19,7 +19,7 @@ export const twelveMeet = () => {
 
   return (
     <div>
-      <Header />
+      
 
       <div className={css.container}>
         <div

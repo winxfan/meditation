@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+
 import css from './TwelveSteps.module.scss';
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 import {DEFAULT_COURSE_ID} from "@/store/user/data";
@@ -14,10 +14,20 @@ export const TwelveSteps = () => {
 
   return (
     <div>
-      <Header />
-
       <div className={css.container}>
-        <img src={currentStep?.pictureSrc} className={css.banner} />
+        <div
+          className={css.banner}
+          style={{backgroundImage: `url(${currentStep?.pictureSrc})`}}
+        >
+          <h1 className={css.bannerTitle}>
+            {currentStep.title}
+          </h1>
+
+          <h3 className={css.bannerSubtitle}>
+            {currentStep.subTitle}
+          </h3>
+        </div>
+
 
         <div className={css.resultBlock}>
           <b>Результат:</b>

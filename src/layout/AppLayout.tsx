@@ -13,6 +13,8 @@ import {DEFAULT_COURSE_ID} from "@/store/user/data";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwipeBackComponent from "@/components/SwipeBack/SwipeBack";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
 
 export interface AppLayoutProps {
   children: ReactNode,
@@ -73,9 +75,13 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
             </div>
           )}
 
+        <Header/>
+
         <div className={css.content}>
           {children}
         </div>
+
+        <Footer/>
       </div>
     </SwipeBackComponent>
   );

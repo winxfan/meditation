@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+
 import css from "./Main.module.scss";
 import { FeedbackSlider } from "@/pages/Main/components/FeedbackSlider";
 import { PrivateMeditationClub } from "@/pages/Main/components/PrivateMeditationClub";
@@ -26,7 +26,7 @@ export const Main = () => {
 
   return (
     <div>
-      <Header />
+      
 
       <div className={css.container}>
         <BeginningOfChange />

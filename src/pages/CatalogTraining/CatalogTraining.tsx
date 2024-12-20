@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+
 import css from "./CatalogTraining.module.scss";
 import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 import { CatalogItem } from "./components/CatalogItem";
@@ -11,7 +11,7 @@ export const CatalogTraining = () => {
 
   return (
     <div>
-      <Header />
+      
 
       <div className={css.container}>
         <h2 className={css.title}>Каталог тренировок</h2>

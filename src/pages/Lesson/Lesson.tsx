@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+
 import css from './Lesson.module.scss';
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 import {useParams} from "react-router-dom";
@@ -16,8 +16,6 @@ export const Lesson = () => {
 
   return (
     <div>
-      <Header />
-
       <div className={css.container}>
         <img src={currentLesson?.pictureSrc} className={css.banner} />
 
