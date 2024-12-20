@@ -1,52 +1,75 @@
 import React, { useEffect, useRef, useState } from "react";
 import css from './RutubeVideo.module.scss';
-import {LoadingStatus} from "@/constants";
-import OkIcon from "@/assets/icons/ok.svg";
-import ErrorIcon from "@/assets/icons/error.svg";
-import {Modal} from "antd";
+import { Modal } from "antd";
+import {SubscribeBtn} from "@/components/SubscribeBtn";
 
 // Типы для свойств компонента
 interface RuTubeEmbedProps {
 	videoId: string; // ID RuTube видео
 	width?: string | number;
 	height?: string | number;
-	blockTimeInSeconds?: number; // Время до блокировки воспроизведения
+	blockTimeInSeconds?: number; // Время для блокировки (5 минут = 300 секунд)
 }
 
 export const RuTubeVideo: React.FC<RuTubeEmbedProps> = ({
-	 videoId,
-	 width = 720,
-	 height = 405,
-	 blockTimeInSeconds = 10, // По умолчанию блокировка через 10 секунд
+  videoId,
+  width = 720,
+  height = 405,
+  blockTimeInSeconds = 300, // По умолчанию блокировка через 5 минут
 }) => {
 	const iframeRef = useRef<HTMLIFrameElement>(null);
 	const [showPopup, setShowPopup] = useState(false); // Состояние показа попапа
+	const [currentTime, setCurrentTime] = useState(0); // Текущее время воспроизведения
+
+	// Отправка сообщения в iframe для получения текущего времени
+	const requestCurrentTime = () => {
+		iframeRef.current?.contentWindow?.postMessage(
+			JSON.stringify({ type: "player:command:getCurrentTime" }),
+			"*"
+		);
+	};
 
 	useEffect(() => {
-		// Таймер для блокировки
-		const timer = setTimeout(() => {
-			setShowPopup(true); // Показываем попап
-		}, blockTimeInSeconds * 1000);
+		const messageListener = (event: MessageEvent) => {
+			try {
+				// const currentTime = event.data.data.time;
+				const data = JSON.parse(event.data);
+
+				console.log('data',data)
+
+				// Проверяем сообщение от RuTube Player
+				if (data?.type === "player:currentTime") {
+					console.log('data.data.time',data.data.time)
+					setCurrentTime(data.data.time); // Обновляем текущее время
+					if (data.data.time >= blockTimeInSeconds) {
+						setShowPopup(true); // Показываем модальное окно
+					}
+				}
+			} catch (error) {
+				console.error("Ошибка обработки сообщения от RuTube:", error);
+			}
+		};
+
+		// Добавляем слушатель сообщений
+		window.addEventListener("message", messageListener);
+
+		// Устанавливаем интервал для запроса текущего времени
+		const interval = setInterval(requestCurrentTime, 1000);
 
 		return () => {
-			clearTimeout(timer); // Очищаем таймер при размонтировании
+			// Удаляем слушатель и очищаем интервал
+			window.removeEventListener("message", messageListener);
+			clearInterval(interval);
 		};
 	}, [blockTimeInSeconds]);
 
-	// Функция для остановки видео
-	const stopVideoPlayback = () => {
-		if (iframeRef.current) {
-			iframeRef.current.contentWindow?.postMessage(
-				JSON.stringify({ type: "player:command:pause" }),
-				"*"
-			);
-		}
-	};
-
-	// Срабатывает, как только попап показывается
+	// Останавливаем видео, когда показывается попап
 	useEffect(() => {
 		if (showPopup) {
-			stopVideoPlayback();
+			iframeRef.current?.contentWindow?.postMessage(
+				JSON.stringify({ type: "player:pause" }),
+				"*"
+			);
 		}
 	}, [showPopup]);
 
@@ -71,20 +94,20 @@ export const RuTubeVideo: React.FC<RuTubeEmbedProps> = ({
 				onCancel={closePopup}
 				footer={null}
 			>
-					<div className={css.modalContent}>
-						<b className={css.modalTitle}>
-							Полный урок доступен <br/>
-							по подписке
-						</b>
+				<div className={css.modalContent}>
+					<b className={css.modalTitle}>
+						Полный урок доступен <br />
+						по подписке
+					</b>
 
-						<p className={css.modalDescription}>
-							Вы можете оформить ее прямо сейчас и проходить программу в свободном досупе
-						</p>
+					<p className={css.modalDescription}>
+						Вы можете оформить ее прямо сейчас и проходить программу в свободном доступе
+					</p>
 
-						<p className={css.modalDescription}>
-							Комментарий успешно отправлен
-						</p>
+					<div className={css.modalFooter}>
+						<SubscribeBtn/>
 					</div>
+				</div>
 			</Modal>
 		</div>
 	);
