@@ -37,6 +37,7 @@ export const TwelveSteps = () => {
         <div className={css.video}>
           <RuTubeVideo
             videoId={currentStep?.videoId}
+            isFree={false}
           />
         </div>
 
