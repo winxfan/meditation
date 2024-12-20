@@ -5,6 +5,7 @@ import banner4 from '@/assets/image/Lesson4.png'
 import audio1 from './data/practice1.mp3'
 import audio2 from './data/practice2.mp3'
 import audio3 from './data/practice3.mp3'
+import audio4 from './data/practice4.mp3'
 
 export const lessonData = [
 	{
@@ -34,7 +35,9 @@ export const lessonData = [
 	{
 		id: 4,
 		pictureSrc: banner4,
-		homeworkDescription: 'Напишите, что вы почувствовали после прохождения практика на уровне эмоций и на уровне эмоций? Какие осознания к вам пришли во время урока и выполнения практики?',
+		homeworkDescription: 'Напишите детально, что вы почувствовали после прохождения практика на уровне тела и эмоций? Какие осознания к вам пришли во время урока и выполнения практики?',
 		videoId: '/70b0e1a7e19eadbd28838b70add68879/?p=GFoQmK0tmlIZpZWE_2pZDg',
+		audioTitle: "Шаг в новую реальность",
+		audioLink: audio4
 	},
 ]
