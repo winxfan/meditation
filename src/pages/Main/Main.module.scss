@@ -7,9 +7,9 @@
 
 .banner {
   margin: 10px 0;
-  aspect-ratio: 340 / 177;
-  height: auto !important;
-  background-size: contain;
+  //aspect-ratio: 340 / 177;
+  height: 210px !important;
+  background-size: cover;
 
   p {
     opacity: 0.75;
@@ -17,10 +17,10 @@
 }
 
 .banner2 {
-  aspect-ratio: 340 / 180;
+  //aspect-ratio: 340 / 180;
   margin: 10px 0;
-  height: auto !important;
-  background-size: contain;
+  height: 210px !important;
+  background-size: cover;
 
   p {
     opacity: 0.75;
@@ -28,9 +28,10 @@
 }
 
 .banner1 {
-  aspect-ratio: 339 / 157;
-  height: auto !important;
-  background-size: contain;
+  //aspect-ratio: 339 / 157;
+  height: 210px !important;
+  //height: auto !important;
+  background-size: cover;
   margin: 10px 0;
 
   p {
@@ -53,8 +54,4 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-}
-
-.absoluteBtn {
-  left: 40% !important;
 }
