@@ -44,11 +44,11 @@ export const StepCard = (props: StepCardProps) => {
 				)}
 			</div>
 
-			{/*<div className={css.footer}>*/}
-			{/*	<Button variant="violet" size="small" onClick={onButtonClick}>*/}
-			{/*		Смотреть*/}
-			{/*	</Button>*/}
-			{/*</div>*/}
+			<div className={css.footer}>
+				<Button variant="violet" size="medium">
+					Смотреть
+				</Button>
+			</div>
 		</div>
 	);
 }

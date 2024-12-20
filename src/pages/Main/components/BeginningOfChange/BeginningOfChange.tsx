@@ -26,7 +26,7 @@ export const BeginningOfChange = () => {
 					pictureUrl={lesson1}
 					whenOpen=''
 					onCardClick={() => navigate(`/lesson/1`)}
-					// buttonTitle="Смотреть"
+					buttonTitle="Смотреть"
 					className={css.card}
 					topText="ЧАСТЬ 1"
 					size='large'
@@ -41,7 +41,7 @@ export const BeginningOfChange = () => {
 					isOpen={true}
 					pictureUrl={lesson2}
 					whenOpen=''
-					// buttonTitle="Смотреть"
+					buttonTitle="Смотреть"
 					onCardClick={() => navigate(`/lesson/2`)}
 					className={css.card}
 					topText="ЧАСТЬ 2"
@@ -55,7 +55,7 @@ export const BeginningOfChange = () => {
 					isOpen={true}
 					pictureUrl={lesson3}
 					whenOpen=''
-					// buttonTitle="Смотреть"
+					buttonTitle="Смотреть"
 					onCardClick={() => navigate(`/lesson/3`)}
 					className={css.card}
 					topText="ЧАСТЬ 3"
@@ -71,7 +71,7 @@ export const BeginningOfChange = () => {
 					isOpen={true}
 					pictureUrl={lesson4}
 					whenOpen=''
-					// buttonTitle="Смотреть"
+					buttonTitle="Смотреть"
 					onCardClick={() => navigate(`/lesson/4`)}
 					className={css.card}
 					topText="ЧАСТЬ 4"

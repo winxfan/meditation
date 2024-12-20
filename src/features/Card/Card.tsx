@@ -77,7 +77,7 @@ export const Card = (props: CardProps) => {
 				{buttonTitle && (
 					<Button
 						variant={variant === 'white' ? 'white' : 'violet'}
-						size="small"
+						size="medium"
 						className={cs(css.button, buttonClassName)}
 						onClick={buttonOnClick}
 					>

@@ -42,7 +42,7 @@ export const Main = () => {
           description="База ежeденевных
            практик для вашего роста
             и достижения целей "
-
+          // buttonTitle="Вступить"
         />
 
         <div className={css.splitContainer}>
@@ -50,7 +50,7 @@ export const Main = () => {
             pictureUrl={banner2}
             size="small"
             className={css.bannerSmall}
-            // buttonTitle="Вступить"
+            buttonTitle="Вступить"
             onCardClick={() => navigate('/community')}
             title="Сообщество"
             description="Наше сообщество — это
@@ -62,7 +62,7 @@ export const Main = () => {
 
           <Card
             pictureUrl={banner3}
-            // buttonTitle="Подключить"
+            buttonTitle="Подключить"
             size="small"
             className={css.bannerSmall}
             onCardClick={() => navigate('/bot')}
@@ -78,7 +78,7 @@ export const Main = () => {
           pictureUrl={banner4}
           size="large"
           className={css.banner}
-          // buttonTitle="Перейти к практикам"
+          buttonTitle="Перейти к практикам"
           // onCardClick={() => navigate('/practices')}
           title="42&nbsp;еженедельных практики с Сергеем"
           description="для вашей трансформации
@@ -90,7 +90,7 @@ export const Main = () => {
           pictureUrl={banner5}
           size="large"
           className={css.banner}
-          // buttonTitle="Перейти к практикам"
+          buttonTitle="Перейти к практикам"
           onCardClick={() => navigate('/base')}
           title="База из 70 практик"
           description="Быстрый результат
@@ -103,7 +103,7 @@ export const Main = () => {
           pictureUrl={banner6}
           size="large"
           className={css.banner}
-          // buttonTitle="Начать тренировки"
+          buttonTitle="Начать тренировки"
           // onCardClick={() => navigate('catalogtraining')}
           title="Спорт с тренером онлайн"
           description="Эффективные тренировки
@@ -117,7 +117,7 @@ export const Main = () => {
           size="large"
           className={css.banner2}
           align="right"
-          // buttonTitle="Получить разбор"
+          buttonTitle="Получить разбор"
           buttonClassName={css.absoluteBtn}
           variant="black"
           onCardClick={() => navigate('/sergey')}
@@ -132,7 +132,7 @@ export const Main = () => {
           size="large"
           className={css.banner}
           variant="black"
-          // buttonTitle="Начать зарабатывать"
+          buttonTitle="Начать зарабатывать"
           onCardClick={() => navigate('referal')}
           title="Круг осознанного обмена"
           description={(<>
