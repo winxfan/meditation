@@ -11,7 +11,7 @@ export const SubscribeBtn = ({className}: {className?: string}) => {
 			<p className={css.subscribeBtnTitle}>
 				Вступить в Private Meditation Club
 			</p>
-			<span className={css.subscribeBtnPrice}>4 990₽/мес</span>
+			{/*<span className={css.subscribeBtnPrice}>4 990₽/мес</span>*/}
 		</Button>
 	)
 }
