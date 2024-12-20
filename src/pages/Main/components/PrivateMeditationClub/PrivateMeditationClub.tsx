@@ -10,12 +10,12 @@ export const PrivateMeditationClub = () => {
 	return (
 		<div className={css.container}>
 			<div className="header">
-				<p className={css.topText}>
+				<p className={css.title}>
 					Private Meditation Club
 				</p>
 
-				<p className={css.title}>
-					Экосистема <br/>
+				<p className={css.topText}>
+					Экосистема
 					для твоей трансформации и финансового роста
 				</p>
 			</div>

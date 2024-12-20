@@ -23,9 +23,9 @@ export const TwelveSteps = () => {
             {currentStep.title}
           </h1>
 
-          <h3 className={css.bannerSubtitle}>
-            {currentStep.subTitle}
-          </h3>
+          {/*<h3 className={css.bannerSubtitle}>*/}
+          {/*  {currentStep.subTitle}*/}
+          {/*</h3>*/}
         </div>
 
 
