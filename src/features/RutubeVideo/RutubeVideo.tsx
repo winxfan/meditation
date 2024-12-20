@@ -9,6 +9,7 @@ interface RuTubeEmbedProps {
 	width?: string | number;
 	height?: string | number;
 	blockTimeInSeconds?: number; // Время для блокировки (5 минут = 300 секунд)
+	isFree?: boolean
 }
 
 export const RuTubeVideo: React.FC<RuTubeEmbedProps> = ({
@@ -16,6 +17,7 @@ export const RuTubeVideo: React.FC<RuTubeEmbedProps> = ({
   width = 720,
   height = 405,
   blockTimeInSeconds = 300, // По умолчанию блокировка через 5 минут
+	isFree = true,
 }) => {
 	const iframeRef = useRef<HTMLIFrameElement>(null);
 	const [showPopup, setShowPopup] = useState(false); // Состояние показа попапа
@@ -41,7 +43,7 @@ export const RuTubeVideo: React.FC<RuTubeEmbedProps> = ({
 				if (data?.type === "player:currentTime") {
 					console.log('data.data.time',data.data.time)
 					setCurrentTime(data.data.time); // Обновляем текущее время
-					if (data.data.time >= blockTimeInSeconds) {
+					if (data.data.time >= blockTimeInSeconds && !isFree) {
 						setShowPopup(true); // Показываем модальное окно
 					}
 				}
