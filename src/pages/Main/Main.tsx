@@ -42,7 +42,7 @@ export const Main = () => {
           description="База ежeденевных
            практик для вашего роста
             и достижения целей "
-          // buttonTitle="Вступить"
+          buttonTitle="Перейти к практикам"
         />
 
         <div className={css.splitContainer}>
