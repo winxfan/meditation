@@ -17,19 +17,19 @@ export const energyList = [
     image: image1,
   },
   {
-    title: "Энергетические потоки",
+    title: "Создание жизни мечты",
     image: image2,
   },
   {
-    title: "Практика внутреннего огня",
+    title: "Самопрограммирование на успех",
     image: image3,
   },
   {
-    title: "Энергия жизни",
+    title: "Обретение уверенности в себе",
     image: image4,
   },
   {
-    title: "Энергетическая чистка",
+    title: "Увеличение финансового потока",
     image: image5,
   },
   {
@@ -41,11 +41,11 @@ export const energyList = [
     image: image7,
   },
   {
-    title: "Родовые корни",
+    title: "Подключение к силе рода",
     image: image8,
   },
   {
-    title: "Личный канал силы",
+    title: "Развитие интуиции",
     image: image9,
   },
   {
@@ -53,11 +53,11 @@ export const energyList = [
     image: image10,
   },
   {
-    title: "Принятие себя",
+    title: "Создание счастливых отношений",
     image: image11,
   },
   {
-    title: "Свет изнутри",
+    title: "Принятие себя",
     image: image12,
   },
 ];

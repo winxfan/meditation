@@ -12,6 +12,7 @@ import {DEFAULT_COURSE_ID} from "@/store/user/data";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import SwipeBackComponent from "@/components/SwipeBack/SwipeBack";
 
 export interface AppLayoutProps {
   children: ReactNode,
@@ -53,27 +54,29 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
   }, [userId, courseId, isAuthorized, userStatus])
 
   return (
-    <div className={cs(css.layout, css[colorScheme])}>
-        {(!courseId) && (
-          <div className={css.hintContainer}>
-            <div className={css.hint}>
-              <QuestionCircleFilled className={css.hintIcon} />
+    <SwipeBackComponent>
+      <div className={cs(css.layout, css[colorScheme])}>
+          {(!courseId) && (
+            <div className={css.hintContainer}>
+              <div className={css.hint}>
+                <QuestionCircleFilled className={css.hintIcon} />
 
-              <div>
-                <b className={css.hintTitle}>
-                  Не удалось найти курс.
-                </b>
-                <p className={css.hintDescription}>
-                  Перейдите в бот курса и нажмите на кнопку "Изучить курс".
-                </p>
+                <div>
+                  <b className={css.hintTitle}>
+                    Не удалось найти курс.
+                  </b>
+                  <p className={css.hintDescription}>
+                    Перейдите в бот курса и нажмите на кнопку "Изучить курс".
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
 
-      <div className={css.content}>
-        {children}
+        <div className={css.content}>
+          {children}
+        </div>
       </div>
-    </div>
+    </SwipeBackComponent>
   );
 };

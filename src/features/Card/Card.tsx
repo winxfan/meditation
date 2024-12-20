@@ -1,10 +1,11 @@
 import css from './Card.module.scss';
 import cs from "classnames";
 import {Button} from "@/components/Button";
+import {ReactNode} from "react";
 
 export interface CardProps {
 	title?: string;
-	description?: string;
+	description?: string | ReactNode;
 	descriptionLight?: boolean;
 	topText?: string;
 	variant?: 'light' | 'black' | 'transparent';
