@@ -36,7 +36,7 @@ export const lessonData = [
 		id: 4,
 		pictureSrc: banner4,
 		homeworkDescription: 'Напишите детально, что вы почувствовали после прохождения практика на уровне тела и эмоций? Какие осознания к вам пришли во время урока и выполнения практики?',
-		videoId: '/70b0e1a7e19eadbd28838b70add68879/?p=GFoQmK0tmlIZpZWE_2pZDg',
+		videoId: '/2d8b87c56a8e8a5fa44540aa5d882cc8/?p=yiiGosoAZf0qz05-sty9Vg',
 		audioTitle: "Шаг в новую реальность",
 		audioLink: audio4
 	},
