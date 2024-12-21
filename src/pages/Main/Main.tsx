@@ -21,6 +21,7 @@ import { LevelsSlider } from "@/pages/Main/components/LevelsSlider";
 import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 import {useNavigate} from "react-router-dom";
 import {SubscribeBtn} from "@/components/SubscribeBtn";
+import cs from "classnames";
 
 export const Main = () => {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ export const Main = () => {
         <Card
           pictureUrl={banner1}
           size="large"
-          className={css.banner1}
+          className={css.banner}
           onCardClick={() => navigate('/energy365')}
           title="Энергия&nbsp;и&nbsp;ресурс 365 дней в году"
           description="База ежeденевных
@@ -117,7 +118,7 @@ export const Main = () => {
         <Card
           pictureUrl={banner7}
           size="large"
-          className={css.banner2}
+          className={css.banner}
           align="right"
           buttonTitle="Получить разбор"
           buttonClassName={css.absoluteBtn}
@@ -150,7 +151,7 @@ export const Main = () => {
           <Card
             pictureUrl={additionalCard1}
             size="small"
-            className={css.bannerSmall}
+            className={cs(css.bannerSmall, css.additionalCard)}
             title="Куратор"
             buttonTitle="Перейти"
           />
@@ -158,7 +159,7 @@ export const Main = () => {
           <Card
             pictureUrl={additionalCard2}
             size="small"
-            className={css.bannerSmall}
+            className={cs(css.bannerSmall, css.additionalCard)}
             title="Работа по целям"
             buttonTitle="Перейти"
           />
@@ -166,7 +167,7 @@ export const Main = () => {
           <Card
             pictureUrl={additionalCard3}
             size="small"
-            className={css.bannerSmall}
+            className={cs(css.bannerSmall, css.additionalCard)}
             onCardClick={() => navigate('twelvemeet')}
             title={(
               <>12 шеринг <br/> встреч</>
@@ -178,7 +179,7 @@ export const Main = () => {
           <Card
             pictureUrl={additionalCard4}
             size="small"
-            className={css.bannerSmall}
+            className={cs(css.bannerSmall, css.additionalCard)}
             title={(
               <>Развивающие <br/> фильмы и книги</>
             )}
