@@ -14,9 +14,7 @@ export const initialState: UserState = {
     _id: DEFAULT_COURSE_ID,
     id: 0,
     username: '',
-    role: 'subscriber',
     first_name: "",
     studyHasStarted: false,
-    studyProgress: {}
   }
 }

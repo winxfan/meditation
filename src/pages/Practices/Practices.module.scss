@@ -1,0 +1,15 @@
+.title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.011em;
+  color: rgba(30, 30, 30, 1);
+  white-space: pre-line;
+}
+
+.cards {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}

@@ -1,7 +1,10 @@
-.container {}
+.container {
+  padding: 0 10px;
+  color:rgba(255, 255, 255);
 
-.banner {
-  width: 100%;
+  &:global(.black) {
+    color: black;
+  }
 }
 
 .homework {
@@ -38,4 +41,33 @@
 
 .video {
   margin: 10px 0;
+}
+
+
+
+.banner {
+  width: 100%;
+  background-color: #D6CDD3;
+  height: 250px;
+  padding: 17px 16px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.bannerTopText {
+  font-size: 10px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.bannerTitle {
+  display: block;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 24.99px;
+  letter-spacing: -0.022em;
+  width: 200px;
+  margin-top: 8px;
 }

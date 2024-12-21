@@ -12,12 +12,16 @@ interface PracticeLinkProps {
 }
 
 const PracticeLink = ({ src, title, link }: PracticeLinkProps) => {
-    const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-        event.preventDefault();
-    };
+    // const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    //     event.preventDefault();
+    // };
 
     return (
-        <Link to={link} className={cl.link_wrapper} onClick={handleClick} >
+        <Link
+          to={link}
+          className={cl.link_wrapper}
+          // onClick={handleClick}
+        >
             <RoundBlock classNames={cl.practice} background="#EAECF3" typeCard="small">
                 <div className={cl.visual}>
                     <ImageWrapper src={src} className={cl.visual__img} type="cover" />

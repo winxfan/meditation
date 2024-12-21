@@ -46,7 +46,7 @@ export const StepCard = (props: StepCardProps) => {
 
 			<div className={css.footer}>
 				<Button variant="violet" size="medium">
-					Смотреть
+					Перейти
 				</Button>
 			</div>
 		</div>

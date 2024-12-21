@@ -5,7 +5,7 @@ import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 import banner from "@/assets/image/community.png";
 
 import {useBackButton} from "@/utils/hooks/useBackButton";
-import cl from "@/pages/PageSergay/index.module.scss";
+import cl from "@/pages/PageSergey/index.module.scss";
 import ImageWrapper from "@/components/ImageWrapper";
 import razbor_1 from "@/assets/image/community1.png";
 import razbor_2 from "@/assets/image/community2.png";

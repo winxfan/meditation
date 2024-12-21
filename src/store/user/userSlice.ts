@@ -3,9 +3,7 @@ import { initialState } from './data'
 import { LoadingStatus } from "@/constants";
 import {HttpResponse, IUser, ITelegramUser} from "@/utils/types";
 import {
-  ApiNextLessonParams,
   getUser,
-  fetchNextLesson,
 } from "@/utils/api/auth";
 
 export interface UserState {
@@ -24,12 +22,6 @@ export interface UserAuthParams {
 export const userAuth = createAsyncThunk<HttpResponse<IUser>, ITelegramUser>(
   'user/auth',async (props) => {
   const {data} = await getUser(props);
-  return data;
-});
-
-export const userNextLesson = createAsyncThunk<HttpResponse<IUser["currentLesson"]>, ApiNextLessonParams>(
-  'user/nextLesson',async (props) => {
-  const {data} = await fetchNextLesson(props);
   return data;
 });
 

@@ -11,7 +11,7 @@ const Lesson = lazy(() => import("./Lesson"));
 const PageBot = lazy(() => import("./Bot"));
 const PageBase = lazy(() => import("./Base"));
 const PagePracties = lazy(() => import("./PagePracties"));
-const PageSergay = lazy(() => import("./PageSergay"));
+const PageSergay = lazy(() => import("./PageSergey"));
 
 const CatalogTraining = lazy(() => import("./CatalogTraining"));
 
@@ -24,6 +24,8 @@ const Energy365Single = lazy(() => import("./Energy365Single"));
 const twelveMeet = lazy(() => import("./twelveMeet"));
 const Community = lazy(() => import("./Community"));
 const Referal = lazy(() => import("./Referal"));
+const Practices = lazy(() => import("./Practices"));
+const PracticeSingle = lazy(() => import("./PracticeSingle"));
 
 export {
   MainPage,
@@ -42,4 +44,6 @@ export {
   twelveMeet,
   Referal,
 	Community,
+  Practices,
+  PracticeSingle,
 };

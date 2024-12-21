@@ -1,8 +1,12 @@
 .container {
   margin: 10px 0;
+}
+
+.header {
   background: linear-gradient(244.52deg, #78117C -15.32%, #381FB7 111.11%);
-  padding: 14px 14px 16px;
   border-radius: 20px;
+  margin: 10px 0;
+  padding: 14px 13px;
 }
 
 .topText {
@@ -25,15 +29,11 @@
   font-weight: 500;
   line-height: 19.04px;
   letter-spacing: -0.022em;
-  color: rgba(236, 233, 240, 1);
+  color: #212831;
 }
 
 .body {
   margin-top: 19px;
-}
-
-.footer {
-  margin-top: 36px;
 }
 
 .slider {
@@ -47,4 +47,10 @@
 .slide {
   width: 248px;
   transition-timing-function: ease-in-out; /* Smooth easing */
+}
+
+.content {
+  background-color: #D4CED4;
+  padding: 18px 13px 10px;
+  border-radius: 20px;
 }

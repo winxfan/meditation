@@ -193,6 +193,30 @@
 
 .banner {
     width: 100%;
+    background-color: #D6CDD3;
+    height: 375px;
+    padding: 18px 16px;
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.bannerTitle {
     display: block;
-    margin-bottom: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 24.99px;
+    letter-spacing: -0.022em;
+    color: rgba(255, 255, 255, 1);
+}
+
+.bannerDescription {
+    font-size: 14px;
+    line-height: 15.6px;
+    display: block;
+    width: 280px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
 }

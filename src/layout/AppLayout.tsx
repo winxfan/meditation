@@ -25,7 +25,6 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
   const {id: userId, first_name, username} = initDataUnsafe?.user ?? {};
 
   const userStatus = useAppSelector((state) => state.user.status);
-  const courseStatus = useAppSelector((state) => state.course.status);
 
   useEffect(() => {
     expand?.();

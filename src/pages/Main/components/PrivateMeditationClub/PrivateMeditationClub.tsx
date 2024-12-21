@@ -9,7 +9,7 @@ export const PrivateMeditationClub = () => {
 
 	return (
 		<div className={css.container}>
-			<div className="header">
+			<div className={css.header}>
 				<p className={css.title}>
 					Private Meditation Club
 				</p>
@@ -20,31 +20,33 @@ export const PrivateMeditationClub = () => {
 				</p>
 			</div>
 
-			<div className={css.footer}>
-				<p className={css.description}>
-					12 трансформационных шагов <br/>
-					<b>к вашей жизни мечты</b>
-				</p>
-			</div>
+			<div className={css.content}>
+				<div className={css.footer}>
+					<p className={css.description}>
+						12 трансформационных шагов <br/>
+						<b>к вашей жизни мечты</b>
+					</p>
+				</div>
 
-			<Swiper
-				slidesPerView="auto"
-				spaceBetween={6}
-				className={css.slider}
-				speed={600} // Set transition speed in milliseconds
-			>
-				{stepData.map((item, index) => (
-					<SwiperSlide className={css.slide} key={index}>
-						<StepCard
-							topText={item.topText}
-							title={item.title}
-							description={item.description}
-							pictureSrc={item.picture}
-							onCardClick={() => navigate(`/twelveSteps/${index + 1}`)}
-						/>
-					</SwiperSlide>
-				))}
-			</Swiper>
+				<Swiper
+					slidesPerView="auto"
+					spaceBetween={6}
+					className={css.slider}
+					speed={600} // Set transition speed in milliseconds
+				>
+					{stepData.map((item, index) => (
+						<SwiperSlide className={css.slide} key={index}>
+							<StepCard
+								topText={item.topText}
+								title={item.title}
+								description={item.description}
+								pictureSrc={item.picture}
+								onCardClick={() => navigate(`/twelveSteps/${index + 1}`)}
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</div>
 		</div>
 	)
 }

@@ -20,16 +20,16 @@ import { Hr } from "@/components/Hr";
 import { LevelsSlider } from "@/pages/Main/components/LevelsSlider";
 import { FixedSubscribeBtn } from "@/components/FixedSubscribeBtn";
 import {useNavigate} from "react-router-dom";
+import {SubscribeBtn} from "@/components/SubscribeBtn";
 
 export const Main = () => {
   const navigate = useNavigate();
 
   return (
     <div>
-      
-
       <div className={css.container}>
         <BeginningOfChange />
+        <SubscribeBtn/>
         <PrivateMeditationClub />
         <LevelsSlider />
 
@@ -79,12 +79,14 @@ export const Main = () => {
           size="large"
           className={css.banner}
           buttonTitle="Перейти к практикам"
-          // onCardClick={() => navigate('/practices')}
+          onCardClick={() => navigate('/practices')}
           title="42&nbsp;еженедельных практики с Сергеем"
           description="для вашей трансформации
            и роста"
           titleWidth="250px"
         />
+
+        <SubscribeBtn/>
 
         <Card
           pictureUrl={banner5}
@@ -142,17 +144,23 @@ export const Main = () => {
           titleWidth="100%"
         />
 
+        <SubscribeBtn/>
+
         <div className={css.splitContainer}>
           <Card
             pictureUrl={additionalCard1}
             size="small"
             className={css.bannerSmall}
+            title="Куратор"
+            buttonTitle="Перейти"
           />
 
           <Card
             pictureUrl={additionalCard2}
             size="small"
             className={css.bannerSmall}
+            title="Работа по целям"
+            buttonTitle="Перейти"
           />
 
           <Card
@@ -160,12 +168,21 @@ export const Main = () => {
             size="small"
             className={css.bannerSmall}
             onCardClick={() => navigate('twelvemeet')}
+            title={(
+              <>12 шеринг <br/> встреч</>
+            )}
+            buttonTitle="Перейти"
+            variant="black"
           />
 
           <Card
             pictureUrl={additionalCard4}
             size="small"
             className={css.bannerSmall}
+            title={(
+              <>Развивающие <br/> фильмы и книги</>
+            )}
+            buttonTitle="Перейти"
           />
         </div>
       </div>

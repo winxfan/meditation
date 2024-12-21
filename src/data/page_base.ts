@@ -7,45 +7,45 @@ import practice6 from '@/assets/image/practice_6.png';
 import practice7 from '@/assets/image/practice_7.png';
 import practice8 from '@/assets/image/practice_8.png';
 
-export const practies = [
+export const practices = [
     {
         src: practice1,
         title: 'Практики на наполнение энергией',
-        link: '/practies/1',
+        link: '/practices/1',
     },
     {
         src: practice2,
         title: 'Практика на обретение внутренней силы и баланса',
-        link: '/practies/2',
+        link: '/practices/2',
     },
     {
         src: practice3,
         title: 'Практика на исцеление отношение и проработку родителей и рода',
-        link: '/practies/3',
+        link: '/practices/3',
     },
     {
         src: practice4,
         title: 'Практики на финансы и достижение целей',
-        link: '/practies/4',
+        link: '/practices/4',
     },
     {
         src: practice5,
         title: 'Практики на проработку эмоциональных блоков',
-        link: '/practies/5',
+        link: '/practices/5',
     },
     {
         src: practice6,
         title: 'Практики на получение ответов от подсознания',
-        link: '/practies/6',
+        link: '/practices/6',
     },
     {
         src: practice7,
         title: 'Практики на тренировку концентрации внимания',
-        link: '/practies/7',
+        link: '/practices/7',
     },
     {
         src: practice8,
         title: 'Практики на очищение',
-        link: '/practies/8',
+        link: '/practices/8',
     },
 ];

@@ -4,6 +4,7 @@ import { App } from "./layout/App";
 import "./utils/i18n";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import * as pages from "./pages";
+import {PracticeSingle} from "./pages/PracticeSingle/PracticeSingle";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -37,6 +38,14 @@ const router = createBrowserRouter([
       {
         path: "/practices",
         element: <pages.PagePracties />,
+      },
+      {
+        path: "/practices/:id",
+        element: <pages.Practices />,
+      },
+      {
+        path: "/practices/:id/:practiceId",
+        element: <pages.PracticeSingle />,
       },
       {
         path: "/sergey",

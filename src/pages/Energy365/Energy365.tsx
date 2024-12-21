@@ -13,8 +13,6 @@ export const Energy365 = () => {
 
   return (
     <div>
-      
-
       <div className={css.container}>
         <div
           className={css.energy__hero}

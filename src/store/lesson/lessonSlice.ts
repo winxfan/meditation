@@ -1,7 +1,7 @@
-import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
 import { initialState } from './data'
 import { LoadingStatus } from "@/constants";
-import {HttpResponse, ILesson, TestScoringPointsData} from "@/utils/types";
+import {HttpResponse,} from "@/utils/types";
 import {
   fetchCreateComment,
   fetchGetComments,
@@ -11,17 +11,11 @@ import {ICommentProps} from "@/features/Commentaries/components/Comment";
 
 export type LessonState = {
   status: LoadingStatus,
-  data: Record<string, ILesson>;
   createCommentStatus: LoadingStatus,
   createCommentData: ICommentProps | null,
   getCommentsStatus: LoadingStatus,
   getCommentsData: ICommentProps[],
 }
-
-export const getLesson = createAsyncThunk<HttpResponse<ILesson>, {id: string}>('lesson/get',async ({id}) => {
-  const {data} = await fetchLesson(id)
-  return data;
-});
 
 export const getComments = createAsyncThunk<HttpResponse<ICommentProps[]>, {lessonId: number}>('comments/get',async ({lessonId}) => {
   const {data} = await fetchGetComments({lessonId})
@@ -42,21 +36,6 @@ const lessonSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
-    builder.addCase(getLesson.pending, (state) => {
-      state.status = LoadingStatus.pending;
-    }),
-    builder.addCase(getLesson.rejected, (state) => {
-      state.status = LoadingStatus.error;
-    }),
-    builder.addCase(getLesson.fulfilled, (state, action) => {
-      state.status = LoadingStatus.success;
-      const {_id} = action.payload.data;
-
-      if (_id) {
-        state.data[_id] = action.payload.data;
-      }
-    })
-
     builder.addCase(createComment.pending, (state) => {
       state.createCommentStatus = LoadingStatus.pending;
     }),

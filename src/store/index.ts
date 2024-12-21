@@ -3,14 +3,12 @@ import { setupListeners } from '@reduxjs/toolkit/query'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
 import { api } from './api'
-import courseReducer from './course/courseSlice'
 import userReducer from './user/userSlice'
 import lessonReducer from './lesson/lessonSlice'
 
 export const store = configureStore({
   reducer: {
     [api.reducerPath]: api.reducer,
-    course: courseReducer,
     user: userReducer,
     lesson: lessonReducer,
   },

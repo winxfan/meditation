@@ -1,4 +1,4 @@
-.page_sergay {
+.page_sergey {
     padding: 14px 10px;
     background-color: #fbfafa;
     white-space: pre-line;
@@ -41,6 +41,7 @@
 
 .rabors__title {
     display: block;
+    margin-top: 40ppx;
     margin-bottom: 20px;
     font-size: 21px !important;
     color: #1e1e1e;
@@ -130,13 +131,51 @@
     }
 }
 
-.banner {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-}
 
 .fixedbutton {
     margin-top: 0px !important;
 }
 
+
+
+.banner {
+    width: 100%;
+    background-color: #D6CDD3;
+    height: 320px;
+    padding: 18px 16px;
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.bannerTitle {
+    display: block;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 24.99px;
+    letter-spacing: -0.022em;
+    width: 210px;
+}
+
+.bannerTitle2 {
+    background-color: rgba(255, 255, 255, 1);
+    display: inline-block;
+    margin: 7.5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    color: rgba(33, 40, 49, 0.5);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.bannerSubtitle {
+    font-size: 14px;
+    line-height: 15.6px;
+    display: block;
+    width: 200px;
+    font-weight: 400;
+    color: rgba(33, 40, 49, 0.5);
+    margin-top: 7.5px;
+}

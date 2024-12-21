@@ -1,0 +1,1 @@
+export {Practices as default} from './Practices';

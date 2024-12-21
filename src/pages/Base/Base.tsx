@@ -1,6 +1,6 @@
 import css from './PageBase.module.scss';
 import PracticeLink from './PracticeLink';
-import { practies } from '@/data/page_base';
+import { practices } from '@/data/page_base';
 import {FixedSubscribeBtn} from "@/components/FixedSubscribeBtn";
 import banner from '@/assets/image/PageBanner70Practicies.png'
 import {useBackButton} from "@/utils/hooks/useBackButton";
@@ -42,7 +42,7 @@ export const PageBase = () => {
 				</p>
 
 				<div className={css.what_is_base__list}>
-					{practies.map((el, i) => {
+					{practices.map((el, i) => {
 						return (
 							<PracticeLink src={el.src} title={el.title} key={i} link={el.link} />
 						);
