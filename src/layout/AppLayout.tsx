@@ -12,6 +12,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
+import {LoadingStatus} from "@/constants";
+import {userAuth} from "@/store/user/userSlice";
 
 export interface AppLayoutProps {
   children: ReactNode,
@@ -44,11 +46,11 @@ export const AppLayout: FC<AppLayoutProps> = ({children}) => {
       return;
     }
 
-    // if (userStatus === LoadingStatus.none) {
-    //   const data = userId ? {id: userId, first_name, username}: undefined;
-    //
-    //   dispatch(userAuth(data));
-    // };
+    if (userStatus === LoadingStatus.none) {
+      const data = userId ? {id: userId, first_name, username}: undefined;
+
+      dispatch(userAuth(data));
+    };
   }, [userId, courseId, isAuthorized, userStatus])
 
   return (
