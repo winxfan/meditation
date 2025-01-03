@@ -113,7 +113,7 @@ export const Referal = () => {
 
         <div className={css.payments}>
           <h4 className={css.payments__title}>
-            Выплаты за круг (2&nbsp;и&nbsp;3&nbsp;уровни)
+            Выплаты за круг 2 уровень
           </h4>
           <ul className={css.payments__list}>
             <li>
@@ -122,14 +122,6 @@ export const Referal = () => {
               </p>
               <p>
                 <b>500 ₽</b> за каждого ежемесячно
-              </p>
-            </li>
-            <li>
-              <p>
-                <b>3 уровень</b>
-              </p>
-              <p>
-                <b>1200 ₽</b> за каждого ежемесячно
               </p>
             </li>
           </ul>
